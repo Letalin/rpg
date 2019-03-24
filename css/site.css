@@ -2,3 +2,12 @@
     font-size: 200%;
     text-align: center;
 }
+
+.titulo {
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+    background-color: #555555;
+    padding: 25px;
+    font-family: algerian;
+}
