@@ -11,3 +11,10 @@
     padding: 25px;
     font-family: algerian;
 }
+
+.navegacao-site {
+    text-align: center;
+}
+.navegacao-site li{
+    display: inline;
+}
