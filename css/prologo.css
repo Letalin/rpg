@@ -1,5 +1,4 @@
 .container {
-    font-family: 'Times New Roman', Times, serif;
     width: 720px;
     margin: auto;
     text-align: justify;
@@ -7,16 +6,3 @@
     font-family: Lucida Calligraphy;
 }
 
-.titulo {
-    text-transform: uppercase;
-    font-size: 60px;
-    text-align: center;
-    background-color: #555555;
-    padding: 25px;
-    font-family: algerian;
-}
-
-.titulo-pagina {
-    font-size: 200%;
-    text-align: center;
-}
