@@ -1,3 +1,7 @@
 .personagens li{
-    display: inline-block;
+    display: inline-block; 
+}
+
+.hayoo {
+    clear: right;
 }
