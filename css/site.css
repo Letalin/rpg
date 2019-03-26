@@ -23,6 +23,7 @@
 }
 .navegacao-site li{
     display: inline;
+    padding-right: 15px;
 }
 
 .container {
