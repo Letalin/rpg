@@ -24,3 +24,12 @@
 .navegacao-site li{
     display: inline;
 }
+
+.container {
+    width: 720px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.5;
+    font-family: 'Rochester', cursive;
+    font-size: 25px;
+}
