@@ -33,3 +33,7 @@
     font-family: 'Rochester', cursive;
     font-size: 25px;
 }
+
+#rodape {
+    display: block;
+}
