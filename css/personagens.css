@@ -1,7 +1,6 @@
 .personagens li{
     display: inline-block; 
     padding: 15px;
-    clear: both;
 }
 
 .art {
@@ -10,7 +9,7 @@
 }
 
 .imagem {
-    display: block;
+    display: inline-block;
     width: 345px;
     height: 460px;
 }
@@ -40,8 +39,4 @@
     left: 50%;
     transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-}
-
-.hayoo {
-    clear: left;
-}
+} 
