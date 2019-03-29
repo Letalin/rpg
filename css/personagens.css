@@ -5,6 +5,7 @@
 
 .container {
     width: 100%;
+    text-align: center;
 }
 .art {
     position: relative;
@@ -35,8 +36,8 @@
 .texto {
     white-space: normal;
     color: white;
-    font-size: 20px;
-    position: absolute;
+    font-size: 18px;
+    position: relative;
     overflow: hidden;
     top: 50%;
     left: 50%;
