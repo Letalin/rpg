@@ -1,17 +1,18 @@
 .personagens li{
     display: inline-block; 
     padding: 15px;
+    clear: both;
 }
 
 .art {
     position: relative;
-    width: 50%;
+    width: 100%;
 }
 
 .imagem {
     display: block;
-    width: 100%;
-    height: auto;
+    width: 345px;
+    height: 460px;
 }
 
 .overlay {
@@ -30,7 +31,7 @@
 }
 
 .texto {
-    white-space: nowrap;
+    white-space: normal;
     color: white;
     font-size: 20px;
     position: absolute;
@@ -39,4 +40,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+.hayoo {
+    clear: left;
 }
