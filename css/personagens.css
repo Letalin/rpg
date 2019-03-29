@@ -3,6 +3,9 @@
     padding: 15px;
 }
 
+.container {
+    width: 100%;
+}
 .art {
     position: relative;
     width: 100%;
