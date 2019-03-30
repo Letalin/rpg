@@ -29,8 +29,36 @@
                 </nav>
             </aside>
             <h1 class="titulo-pagina">Território de Dônia</h1>
-            <div>
-                <img class="imagem-mapa" src="../img/mapa.jpeg" alt="mapa de dônia">
+            <div class="container">
+                <img id="mapa" src="../img/mapa.jpeg" alt="Mapa do território de Dônia">
+
+                <div id="myModal" class="modal">
+                    <span class="close">×</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+
+                <script>
+                    // seleciona o modal
+                    var modal = document.getElementById('myModal');
+
+                    // pega a imagem e a insere no modal
+                    var img = document.getElementById('mapa');
+                    var modalImg = document.getElementById('img01');
+                    var captionText = document.getElementById('caption');
+                    img.onclick = function () {
+                        modal.style.display = 'block';
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+
+                    // pega o span para sair do modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    span.onclick = function () {
+                        modal.style = "none";
+                    }
+                </script>
             </div>
         </main>
     </div>
