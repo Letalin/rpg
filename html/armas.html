@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <div class="content">
     <div>
         <!--Botão para abrir-->
         <button onclick="document.getElementById('id01').style.display='block'"">Cadastre-se</button>
@@ -41,7 +42,7 @@
             </div>
     </div>
 
-    
+
     <h1 class="titulo">L.E.S</h1>
 
     </div>
@@ -93,20 +94,21 @@
             </div>
         </div>
     </main>
-    <footer class="rodape">
+    </div>
+    <footer class="footer">
         &copy; Felipe Almeida, Vinicios Schulze
     </footer>
     <script>
-            var modal = document.getElementById('id01');
-    
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
+        var modal = document.getElementById('id01');
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
-    
-    
-        </script>
+        }
+
+
+    </script>
 </body>
 
 </html>

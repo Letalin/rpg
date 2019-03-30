@@ -36,11 +36,17 @@
     font-size: 25px;
 }
 
-.rodape {
-    padding: 10px;
-    background-color: #d1d1e0;
-}
-
 b {
     font-weight: bold;
+}
+
+.footer {
+    padding: 10px;
+    background-color: #d1d1e0;
+    height: 50px;
+}
+
+/* classe contendo o conteudo da pagina, para calcular a distancia que o footer vai ficar do conteudo*/
+.content {
+    min-height: calc(100vh - 70px);
 }
