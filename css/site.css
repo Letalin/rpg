@@ -39,10 +39,8 @@
 .rodape {
     padding: 10px;
     background-color: #d1d1e0;
-    text-align: center;
 }
 
-.felipe {
-    width: 50%;
+b {
+    font-weight: bold;
 }
-
