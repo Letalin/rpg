@@ -30,7 +30,7 @@
 .container {
     width: 720px;
     margin: auto;
-    text-align: center;
+    text-align: justify;
     line-height: 1.5;
     font-family: 'Rochester', cursive;
     font-size: 25px;
@@ -46,7 +46,7 @@ b {
     height: 50px;
 }
 
-/* classe contendo o conteudo da pagina, para calcular a distancia que o footer vai ficar do conteudo*/
+/* classe contendo o conteudo da pagina, usado p/calcular a distancia que o footer vai ficar do conteudo*/
 .content {
     min-height: calc(100vh - 70px);
 }
