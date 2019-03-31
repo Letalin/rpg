@@ -67,6 +67,7 @@ button:hover {
     cursor: pointer;
 }
 
+/* coloca o botão por cima do cabeçalho*/
 .botao {
     float: right;
     position: absolute;
