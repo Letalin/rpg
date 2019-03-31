@@ -1,7 +1,7 @@
 .titulo-pagina {
     font-size: 200%;
     text-align: center;
-    font-family: 'Rochester', cursive;
+    font-family: 'Cinzel', serif;
     padding: 20px;
 }
 
@@ -43,7 +43,7 @@ body{
 
 .footer {
     padding: 10px;
-    background-color: #d1d1e0;
+    background-color: grey;
     height: 50px;
 }
 

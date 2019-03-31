@@ -62,7 +62,8 @@ button {
     margin: 0 0;
     align-items: center;
     background-color: darkred;
-    padding: 47.3px;
+    font-family: 'Cinzel', serif;
+    padding: 46px;
     border: none;
     float: right;
 }
@@ -96,6 +97,6 @@ input {
     margin: auto;
     text-align: justify;
     line-height: 1.5;
-    font-family: 'Rochester', cursive;
+    font-family: 'Cinzel', serif;
     font-size: 25px;
 }
