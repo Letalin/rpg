@@ -11,13 +11,14 @@
     text-align: center;
     background-color: #555555;
     padding: 25px;
-    font-family: 'Sancreek', cursive;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
 }
 
 .navegacao-site {
     text-align: center;
     padding: 20px;
-    font-family: 'Rochester', cursive;
+    font-family: 'Cinzel', serif;
     font-size: 20px;
 }
 
@@ -32,8 +33,8 @@
     margin: auto;
     text-align: justify;
     line-height: 1.5;
-    font-family: 'Rochester', cursive;
-    font-size: 25px;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
 }
 
 body{
