@@ -72,8 +72,5 @@ body {
 
 .teste-nome {
     display: inline;
-}
-
-.asd {
-    width: 50%;
+    padding: 20px;
 }
