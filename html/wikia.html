@@ -16,40 +16,37 @@
 
 <body>
     <div class="content">
-            <div class="botao"> 
-                    <!--Botão para abrir-->
-                    <button onclick="document.getElementById('modal_button').style.display='block'">Cadastre-se</button>
-    
-                    <!--O proprio modal-->
-                    <div id='modal_button' class="modal-botao">
-                        <span onclick="document.getElementById('modal_button').style.display='none'" class='fechar'
-                            title="Fechar negoço" &times></span>
-    
-                        <!--Conteudo do modal-->
-                        <div class="ajustar-modal">
-                            <form class="conteudo-modal animar">
-                                <label for="unome">Nome</label> <br>
-                                <input type="text" name="nome" required> <br>
-                                <label for="usobre">Sobrenome</label> <br>
-                                <input type="text" name="sobrenome" required> <br>
-                                <label for="uemail">Email</label> <br>
-                                <input type="text" name="email" required> <br>
-    
-    
-                                <input type="submit" name="botao-cadastrar">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-    
-                <div>
-        <!--Parte de cima do site-->
-        <div class="cabecalho">
+        <div class="botao">
+            <!--Botão para abrir-->
+            <button onclick="document.getElementById('modal_button').style.display='block'">Cadastre-se</button>
 
-            
+            <!--O proprio modal-->
+            <div id='modal_button' class="modal-botao">
+                <span onclick="document.getElementById('modal_button').style.display='none'" class='fechar'
+                    title="Fechar negoço" &times></span>
+
+                <!--Conteudo do modal-->
+                <div class="ajustar-modal">
+                    <form class="conteudo-modal animar">
+                        <label for="unome">Nome</label> <br>
+                        <input type="text" name="nome" required> <br>
+                        <label for="usobre">Sobrenome</label> <br>
+                        <input type="text" name="sobrenome" required> <br>
+                        <label for="uemail">Email</label> <br>
+                        <input type="text" name="email" required> <br>
+
+
+                        <input type="submit" name="botao-cadastrar">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <!--Parte de cima do site-->
+            <div class="cabecalho">
                 <h1 class="titulo">L.E.S</h1>
             </div>
-
         </div>
         <main>
             <aside class="navegacao-site">
@@ -119,10 +116,14 @@
             </div>
         </main>
     </div>
-    <footer class="footer">
-        &copy; Felipe Almeida, Vinicios Schulze
-    </footer>
-
+    <div class="footer-1">
+        <footer class="footer">
+            <ul class="teste">
+                <li class="teste-nome">Felipe Almeidas</li>
+                <li class="teste-nome">Vinicios Schulze</li>
+            </ul>
+        </footer>
+    </div>
     <!--Script pra fechar com click o formulário-->
     <script>
         var modal = document.getElementById('modal_button');
@@ -132,8 +133,6 @@
                 modal.style.display = "none";
             }
         }
-
-
     </script>
 </body>
 

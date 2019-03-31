@@ -46,8 +46,7 @@ b {
     height: 50px;
 }
 
-/* classe contendo o conteudo da pagina, usado p/calcular a distancia que o footer vai ficar do conteudo*/
-
+/* classe contendo o conteudo da pagina, usado p/deixar o rodape no fim da pagina*/
 .content {
     min-height: calc(100vh - 70px);
 }
@@ -63,14 +62,18 @@ b {
     left: 0;
 }
 
-button:hover {
-    cursor: pointer;
+body {
+    overflow-y: scroll;
 }
 
-/* coloca o botão por cima do cabeçalho*/
-.botao {
-    float: right;
-    position: absolute;
-    top: 0;
-    right: 0;
+.footer-1 {
+    text-align: center;
+}
+
+.teste-nome {
+    display: inline;
+}
+
+.asd {
+    width: 50%;
 }

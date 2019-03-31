@@ -67,6 +67,14 @@ button {
     float: right;
 }
 
+/* coloca o botão por cima do cabeçalho*/
+.botao {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 button:hover {
     opacity: 0.8;
     cursor: pointer;
