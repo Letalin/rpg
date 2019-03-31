@@ -4,10 +4,6 @@ td, th {
     padding: 15px;
 }
 
-button:hover {
-    cursor: pointer;
-}
-
 label, input {
     padding: 15px;
 }

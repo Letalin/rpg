@@ -62,3 +62,12 @@ b {
     right: 0;
     left: 0;
 }
+
+button:hover {
+    cursor: pointer;
+}
+
+.botao {
+    float: right;
+    position: absolute;
+}
