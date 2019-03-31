@@ -1,4 +1,4 @@
-.modal {
+.modal-botao {
     display: none;
     position: fixed;
     z-index: 1;
@@ -15,7 +15,7 @@
 .conteudo-modal {
     background-color: white;
     margin: 5px auto;
-    border: 1px solid;
+    border: 20px solid white;
     width: 70%;
 }
 
@@ -56,24 +56,35 @@
     }
 }
 
-button{
-    background-color: darkgoldenrod ;
+button {
+    position: relative;
     color: white;
-    margin: 0px 0;
+    margin: 0 0;
     align-items: center;
-    padding: 10px 10px;
+    background-color: darkred;
+    padding: 47px;
     border: none;
+    float: right;
 }
 
-button:hover{
+button:hover {
     opacity: 0.8;
 }
 
-input{
+input {
     width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.ajustar-modal {
+    width: 720px;
+    margin: auto;
+    text-align: justify;
+    line-height: 1.5;
+    font-family: 'Rochester', cursive;
+    font-size: 25px;
 }

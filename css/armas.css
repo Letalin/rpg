@@ -7,3 +7,7 @@ td, th {
 button:hover {
     cursor: pointer;
 }
+
+label, input {
+    padding: 15px;
+}

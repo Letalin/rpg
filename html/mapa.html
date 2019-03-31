@@ -11,12 +11,46 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/site.css">
     <link rel="stylesheet" href="../css/mapa.css">
+    <link rel="stylesheet" href="../css/formulario.css">
     <title>Wikia L.E.S - Mapa</title>
 </head>
 
 <body>
     <div class="content">
-        <h1 class="titulo">L.E.S</h1>
+        <!--Parte de cima do site-->
+        <div class="cabecalho">
+
+            <div>
+                <!--Botão para abrir-->
+                <button onclick="document.getElementById('modal_button').style.display='block'">Cadastre-se</button>
+
+                <!--O proprio modal-->
+                <div id='modal_button' class="modal-botao">
+                    <span onclick="document.getElementById('modal_button').style.display='none'" class='fechar'
+                        title="Fechar negoço" &times></span>
+
+                    <!--Conteudo do modal-->
+                    <div class="ajustar-modal">
+                        <form class="conteudo-modal animar">
+                            <label for="unome">Nome</label> <br>
+                            <input type="text" name="nome" required> <br>
+                            <label for="usobre">Sobrenome</label> <br>
+                            <input type="text" name="sobrenome" required> <br>
+                            <label for="uemail">Email</label> <br>
+                            <input type="text" name="email" required> <br>
+
+
+                            <input type="submit" name="botao-cadastrar">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="titulo">L.E.S</h1>
+            </div>
+
+        </div>
         <main>
             <aside class="navegacao-site">
                 <nav>
@@ -40,14 +74,14 @@
 
                 <script>
                     // seleciona o modal
-                    var modal = document.getElementById('myModal');
+                    var modal_map = document.getElementById('myModal');
 
                     // pega a imagem e a insere no modal
                     var img = document.getElementById('mapa');
                     var modalImg = document.getElementById('img01');
                     var captionText = document.getElementById('caption');
                     img.onclick = function () {
-                        modal.style.display = 'block';
+                        modal_map.style.display = 'block';
                         modalImg.src = this.src;
                         captionText.innerHTML = this.alt;
                     }
@@ -56,7 +90,7 @@
                     var span = document.getElementsByClassName("close")[0];
 
                     span.onclick = function () {
-                        modal.style = "none";
+                        modal_map.style = "none";
                     }
                 </script>
             </div>
@@ -65,6 +99,19 @@
     <footer class="footer">
         &copy; Felipe Almeida, Vinicios Schulze
     </footer>
+
+    <!--Script pra fechar com click o formulário-->
+    <script>
+        var modal_formulario = document.getElementById('modal_button');
+
+        window.onclick = function (event) {
+            if (event.target == modal_formulario) {
+                modal_formulario.style.display = "none";
+            }
+        }
+
+
+    </script>
 </body>
 
 </html>
