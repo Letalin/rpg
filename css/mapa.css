@@ -1,4 +1,4 @@
-#mapa {
+#map {
     border-radius: 5px;
     /* arredondamento das bordas */
     cursor: pointer;
@@ -13,11 +13,9 @@
     text-align: center;
 }
 
-#mapa:hover {
+#map:hover {
     opacity: 0.8;
 }
-
-/* modal (backround)*/
 
 .modal {
     display: none;
@@ -48,8 +46,6 @@
     padding: 10px 0;
     height: 150px;
 }
-
-/* adiciona animação*/
 
 .modal-content, #caption {
     -webkit-animation-name: zoom;

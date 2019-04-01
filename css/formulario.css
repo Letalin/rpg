@@ -69,8 +69,7 @@ button {
 }
 
 /* coloca o botão por cima do cabeçalho*/
-
-.botao {
+.buttom-local {
     float: right;
     position: absolute;
     top: 0;

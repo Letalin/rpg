@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 
 <body>
     <div class="content">
-        <div class="botao">
+        <div class="buttom-local">
             <!--Botão para abrir-->
             <button onclick="document.getElementById('modal_button').style.display='block'">Cadastre-se</button>
 
@@ -42,10 +42,10 @@
             </div>
         </div>
 
-        <h1 class="titulo">Doença das Almas</h1>
+        <h1 class="title">Doença das Almas</h1>
 
         <main>
-            <aside class="navegacao-site">
+            <aside class="site-navigation">
                 <nav>
                     <ul>
                         <li><a href="../html/wikia.html">Prólogo</a></li>
@@ -55,9 +55,9 @@
                     </ul>
                 </nav>
             </aside>
-            <h1 class="titulo-pagina">Dônia</h1>
+            <h1 class="title-page">Dônia</h1>
             <div class="container">
-                <img id="mapa" src="../img/mapa.jpeg" alt="Mapa do território de Dônia">
+                <img id="map" src="../img/mapa.jpeg" alt="Mapa do território de Dônia">
 
                 <div id="myModal" class="modal">
                     <span class="close">×</span>
@@ -71,8 +71,8 @@
             </div>
         </main>
     </div>
-    <footer class="footer">
-        <aside class="columns">
+    <footer>
+        <div class="columns">
             <div class="names">Site Design:</div>
             <div class="name-left">
                 <ul>
@@ -107,7 +107,7 @@
                     <li>contato@engenheiropedrodealmeida.com.br</li>
                 </ul>
             </div>
-        </aside>
+        </div>
     </footer>
 
 
@@ -125,7 +125,7 @@
         var modal_map = document.getElementById('myModal');
 
         // pega a imagem e a insere no modal
-        var img = document.getElementById('mapa');
+        var img = document.getElementById('map');
         var modalImg = document.getElementById('img01');
         var captionText = document.getElementById('caption');
         img.onclick = function () {

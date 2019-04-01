@@ -1,4 +1,4 @@
-.personagens li {
+.characters li {
     display: inline-block;
     padding: 15px;
 }
@@ -14,7 +14,7 @@
     height: 460px;
 }
 
-.imagem {
+.image {
     display: inline-block;
     width: 345px;
     height: 460px;

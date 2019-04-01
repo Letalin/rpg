@@ -1,11 +1,4 @@
-.titulo-pagina {
-    font-size: 200%;
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    padding: 20px;
-}
-
-.titulo {
+.title {
     text-transform: uppercase;
     font-size: 60px;
     text-align: center;
@@ -15,17 +8,29 @@
     font-weight: bold;
 }
 
-.navegacao-site {
+.title-page {
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    padding: 20px;
+}
+
+.site-navigation {
     text-align: center;
     padding: 20px;
     font-family: 'Cinzel', serif;
     font-size: 20px;
 }
 
-.navegacao-site li {
+.site-navigation li {
     display: inline;
     padding-right: 15px;
     font-size: 27px;
+}
+
+body {
+    overflow-y: scroll;
+    background-image: linear-gradient(0,#ABA77D, #F3EEB4  );
 }
 
 .container {
@@ -37,25 +42,16 @@
     font-size: 20px;
 }
 
-body{
-    background-image: linear-gradient(0,#ABA77D, #F3EEB4  );
-}
-
-.footer {
-    padding: 10px;
-    background-color: grey;
-    margin-bottom: 0;
-}
-
 /* classe contendo o conteudo da pagina, usado p/deixar o rodape no fim da pagina*/
 .content {
     min-height: calc(100vh - 70px);
 }
 
-body {
-    overflow-y: scroll;
+footer {
+    padding: 10px;
+    background-color: grey;
+    margin-bottom: 0;
 }
-
 .columns {
     width: 720px;
     margin-left: auto;
@@ -79,11 +75,9 @@ body {
     text-align: center;
 }
 
-li {
-    line-height: 1;
-}
 .social-networks li {
     display: inline-block;
+    line-height: 1;
 }
 .social-networks a {
     display: inline-block;
