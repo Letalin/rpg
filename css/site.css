@@ -44,7 +44,7 @@ body{
 .footer {
     padding: 10px;
     background-color: grey;
-    height: 135px;
+    margin-bottom: 0;
 }
 
 /* classe contendo o conteudo da pagina, usado p/deixar o rodape no fim da pagina*/
