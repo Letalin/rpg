@@ -88,11 +88,10 @@ body {
 
 .names {
     text-align: center;
-    line-height: 1;
 }
 
 li {
-    line-height: 1.5;
+    line-height: 1;
 }
 .social-networks li {
     display: inline-block;
