@@ -3,6 +3,7 @@
     font-size: 60px;
     text-align: center;
     background-color: #555555;
+    /*background-image: url(../img/banner.jpg);*/
     padding: 25px;
     font-family: 'Cinzel', serif;
     font-weight: bold;
@@ -42,7 +43,6 @@ body {
     font-size: 20px;
 }
 
-/* classe contendo o conteudo da pagina, usado p/deixar o rodape no fim da pagina*/
 .content {
     min-height: calc(100vh - 70px);
 }
@@ -83,7 +83,7 @@ footer {
     display: inline-block;
     width: 40px;
     height: 40px;
-    text-indent: -9999px; /* move para direita ou esquerda o texto selecionado*/
+    text-indent: -9999px;
 }
 
 .github {
