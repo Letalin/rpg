@@ -13,13 +13,12 @@
 }
 
 .conteudo-modal {
-    background-image: url(../img/parchment.jpg);
+    background-image: linear-gradient(0,#ABA77D, #F3EEB4  );
     background-size: 100%;
-    height: 399px;
-    padding: 25px;
-}
+    height: 350px;
+    padding: 25px;}
 
-.fechar {
+.closed {
     position: absolute;
     right: 25px;
     top: 0;
@@ -28,7 +27,7 @@
     font-weight: bold;
 }
 
-.fechar:hover .fechar:focus {
+.closed:hover .closed:focus {
     color: red;
     cursor: pointer;
 }

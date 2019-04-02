@@ -22,7 +22,7 @@
 
             <!--O proprio modal-->
             <div id='modal_button' class="modal-botao">
-                <span onclick="document.getElementById('modal_button').style.display='none'" class='fechar'
+                <span onclick="document.getElementById('modal_button').style.display='none'" class='closed'
                     title="Fechar negoço" &times></span>
 
                 <!--Conteudo do modal-->
@@ -60,7 +60,7 @@
                 <img id="map" src="../img/mapa.jpeg" alt="Mapa do território de Dônia">
 
                 <div id="myModal" class="modal">
-                    <span class="close">×</span>
+                    <span class="close-map">×</span>
                     <img class="modal-content" id="img01">
                     <div id="caption"></div>
                 </div>
@@ -81,7 +81,7 @@
                     <li>almeida.felipe98@gmail.com</li>
                 </ul>
                 <ul class="social-networks">
-                    <li><a class="github" href="https://github.com/Letalin" target="_blank">Github</a></li>
+                    <li><a class="github" href="https://github.com/felipelalmeida" target="_blank">Github</a></li>
                     <li><a class="linkedin" href="https://www.linkedin.com/in/felipe-almeida-5115b4183/"
                             target="_blank">LinkedIn</a>
                     </li>
@@ -135,7 +135,7 @@
         }
 
         // pega o span para sair do modal
-        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("close-map")[0];
 
         span.onclick = function () {
             modal_map.style = "none";
