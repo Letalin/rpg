@@ -52,6 +52,11 @@ footer {
     background-color: grey;
     margin-bottom: 0;
 }
+
+footer a {
+    color: black;
+}
+
 .columns {
     width: 720px;
     margin-left: auto;
