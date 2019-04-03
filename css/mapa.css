@@ -1,8 +1,6 @@
 #map {
     border-radius: 5px;
-    /* arredondamento das bordas */
     cursor: pointer;
-    /* tipo de cursor ao passar o mouse sobre a imagem*/
     transition: 0.6s;
     margin-left: auto;
     width: 512px;
