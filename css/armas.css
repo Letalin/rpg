@@ -9,3 +9,7 @@ td, th {
     width: 220px;
     height: 165px;
 }
+
+.content {
+    min-height: calc(300vh - 70px);
+}
