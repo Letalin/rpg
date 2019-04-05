@@ -91,6 +91,10 @@ footer a {
     text-indent: -9999px;
 }
 
+.mail:hover {
+    color: #480792;
+}
+
 .github {
     background-image: url(../img/github.png)
 }
