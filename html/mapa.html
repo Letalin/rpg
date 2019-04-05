@@ -103,45 +103,16 @@
                 <ul>
                     <li>História:</li>
                     <li>Pedro H. Almeida</li>
-                    <li><a
-                            href="mailto:contato@engenheiropedrodealmeida.com.br" class="mail">contato@engenheiropedrodealmeida.com.br</a>
+                    <li><a href="mailto:contato@engenheiropedrodealmeida.com.br"
+                            class="mail">contato@engenheiropedrodealmeida.com.br</a>
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
 
-
-    <script>
-        // Script modal formulário
-        var modal_formulario = document.getElementById('modal_button');
-
-        window.onclick = function (event) {
-            if (event.target == modal_formulario) {
-                modal_formulario.style.display = "none";
-            }
-        }
-
-        // seleciona o modal
-        var modal_map = document.getElementById('myModal');
-
-        // pega a imagem e a insere no modal
-        var img = document.getElementById('map');
-        var modalImg = document.getElementById('img01');
-        var captionText = document.getElementById('caption');
-        img.onclick = function () {
-            modal_map.style.display = 'block';
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-
-        // pega o span para sair do modal
-        var span = document.getElementsByClassName("close-map")[0];
-
-        span.onclick = function () {
-            modal_map.style = "none";
-        }
-    </script>
+    <script src="../js/exit_form_modal.js"></script>
+    <script src="../js/zoom_map.js"></script>
 </body>
 
 </html>
