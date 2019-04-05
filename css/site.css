@@ -31,7 +31,7 @@
 
 body {
     overflow-y: scroll;
-    background-image: linear-gradient(0,#ABA77D, #F3EEB4  );
+    background-image: linear-gradient(0,rgb(211, 211, 211),white  );
 }
 
 .container {
