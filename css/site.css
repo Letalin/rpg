@@ -3,7 +3,6 @@
     font-size: 60px;
     text-align: center;
     background-color: #555555;
-    /*background-image: url(../img/banner.jpg);*/
     padding: 25px;
     font-family: 'Cinzel', serif;
     font-weight: bold;
@@ -82,7 +81,7 @@ footer a {
 
 .social-networks li {
     display: inline-block;
-    line-height: 1;
+    line-height: 1.5px;
 }
 .social-networks a {
     display: inline-block;
