@@ -3,114 +3,100 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <link rel="icon" href="../img/enco.png">
+
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/site.css">
-    <link rel="stylesheet" href="../css/formulario.css">
+    <link rel="stylesheet" href="../css/menu.css">
     <title>Wikia - Prólogo</title>
 </head>
 
 <body>
-    <div class="content">
-        <div class="buttom-local">
-            <!--Botão para abrir-->
-            <button onclick="document.getElementById('modal_button').style.display='block'">Cadastre-se</button>
-
-            <!--O proprio modal-->
-            <div id='modal_button' class="modal-button">
-                <span onclick="document.getElementById('modal_button').style.display='none'" class='closed'
-                    title="Fechar negoço" &times></span>
-
-                <!--Conteudo do modal-->
-                <div class="adjust-modal">
-                    <form class="modal-content animate">
-                        <label for="unome">Nome</label> <br>
-                        <input type="text" name="nome" required> <br>
-                        <label for="usobre">Sobrenome</label> <br>
-                        <input type="text" name="sobrenome" required> <br>
-                        <label for="uemail">Email</label> <br>
-                        <input type="text" name="email" required> <br>
+    <!-- <div class="buttom-local"> -->
+    <!--Botão para abrir-->
+    <!-- <button onclick="document.getElementById('modal_button').style.display='block'">Cadastre-se</button> -->
 
 
-                        <input type="submit" name="botao-cadastrar">
-                    </form>
-                </div>
-            </div>
-        </div>
+
+    <div class="header">
+        <h1 class="logo">Doença das Almas</h1>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-ellipsis-h"></i>
+        </label>
 
 
-        <h1 class="title">Doença das Almas</h1>
+        <ul class="menu">
+            <a href="../html/wikia.html">Prólogo</a>
+            <a href="../html/personagens.html">Personagens</a>
+            <a href="../html/armas.html">Armas</a>
+            <a href="../html/mapa.html">Mapa</a>
+            <a href="../html/formulario.html">Cadastre-se</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
 
-        <main>
-            <aside class="site-navigation">
-                <nav>
-                    <ul>
-                        <li><a href="../html/wikia.html" class="round-buttom">Prólogo</a></li>
-                        <li><a href="../html/personagens.html" class="round-buttom">Personagens</a></li>
-                        <li><a href="../html/armas.html" class="round-buttom">Armas</a></li>
-                        <li><a href="../html/mapa.html" class="round-buttom">Mapa</a></li>
-                    </ul>
-                </nav>
-            </aside>
-            <h1 class="title-page">Prólogo</h1>
-            <div class="container">
-                <p>Essa é a história de quatro homens nascidos em época tempestuosa em que foram levados
-                    ao limite para lutar contra outros homens que tentavam defender suas terras e sua honra.</p>
+    </div>
+    <h2 class="title-page">Prólogo</h2>
+    <div class="container">
+        <p>Essa é a história de quatro homens nascidos em época tempestuosa em que foram levados
+            ao limite para lutar contra outros homens que tentavam defender suas terras e sua honra.</p>
 
-                <p>Os quatro homens nasceram em regiões diferentes de um mesmo território governado por duas
-                    famílias reais unidas três gerações atrás, a família das Azaléias e a família dos Vermelhos,
-                    no momento do conflito o governante era prestigioso L.E.S. Horian, considerado por muitos
-                    o
-                    governante
-                    perfeito,
-                    carismático e imponente sempre foi entusiasta nas ciências naturais e da alma, o que explica em
-                    parte
-                    seu interesse
-                    no recém descoberto Enco extraído no país mais ao norte, entretanto o governante carregava uma
-                    grande
-                    vergonha,
-                    diferentemente de seus antepassados, Horian não conseguia ter filhos, fazendo-o optar por práticas
-                    menos
-                    ortodoxas
-                    de conceber um herdeiro para seu reino, dessa maneira, aceitando um culto até então considerado
-                    obscuro
-                    pela sua natureza
-                    ligada ao minério, fomentou então a dispersão da religião por todo o território até o dia em que sua
-                    mulher,
-                    Lusenhuf deu a luz
-                    ao pequeno Ethel, em um primeiro momento Lusenhuf tentou argumentar que Ethel precisava descansar
-                    pois havia chorado
-                    demais e havia sido um parto difícil, mesmo assim Horian adentrou os aposentos de sua amada esposa e
-                    quando viu o rosto
-                    de seu recém nascido e tão esperado filho sua fisionomia mudou e nunca mais fora a mesma, segundo
-                    ele ,
-                    seu filho não
-                    havia sido concebido por ele e Lusenhuf, mas sim por ele e Alva. </p>
+        <p>Os quatro homens nasceram em regiões diferentes de um mesmo território governado por duas
+            famílias reais unidas três gerações atrás, a família das Azaléias e a família dos Vermelhos,
+            no momento do conflito o governante era prestigioso L.E.S. Horian, considerado por muitos
+            o
+            governante
+            perfeito,
+            carismático e imponente sempre foi entusiasta nas ciências naturais e da alma, o que explica em
+            parte
+            seu interesse
+            no recém descoberto Enco extraído no país mais ao norte, entretanto o governante carregava uma
+            grande
+            vergonha,
+            diferentemente de seus antepassados, Horian não conseguia ter filhos, fazendo-o optar por práticas
+            menos
+            ortodoxas
+            de conceber um herdeiro para seu reino, dessa maneira, aceitando um culto até então considerado
+            obscuro
+            pela sua natureza
+            ligada ao minério, fomentou então a dispersão da religião por todo o território até o dia em que sua
+            mulher,
+            Lusenhuf deu a luz
+            ao pequeno Ethel, em um primeiro momento Lusenhuf tentou argumentar que Ethel precisava descansar
+            pois havia chorado
+            demais e havia sido um parto difícil, mesmo assim Horian adentrou os aposentos de sua amada esposa e
+            quando viu o rosto
+            de seu recém nascido e tão esperado filho sua fisionomia mudou e nunca mais fora a mesma, segundo
+            ele ,
+            seu filho não
+            havia sido concebido por ele e Lusenhuf, mas sim por ele e Alva. </p>
 
-                <p>Alva ou Máscara Alva, era o nome pelo qual a Deusa do minério era conhecida, após dizer tais palavras
-                    Horian atacou seu orientador espiritual e ordenou que fosse criado um decreto banindo da região
-                    todos os sacerdotes
-                    de todo o
-                    território que governava, dando ordem para seu exército massacrar tanto sacerdotes como praticantes
-                    do culto, pois segundo ele
-                    a religião ameaçava a soberania das Azaléias vermelhas.</p>
+        <p>Alva ou Máscara Alva, era o nome pelo qual a Deusa do minério era conhecida, após dizer tais palavras
+            Horian atacou seu orientador espiritual e ordenou que fosse criado um decreto banindo da região
+            todos os sacerdotes
+            de todo o
+            território que governava, dando ordem para seu exército massacrar tanto sacerdotes como praticantes
+            do culto, pois segundo ele
+            a religião ameaçava a soberania das Azaléias vermelhas.</p>
 
-                <p>Após assinar tal decreto, que revoltou parte de seu exército, Horian ordenou que Lusenhuf aceitasse
-                    que
-                    Ethel não era filho
-                    deles e que a criança devia ser morta o quanto antes, pois ela representava uma enorme ameaça,
-                    Lusenhuf
-                    obviamente não
-                    aceitou a decisão de seu marido e viu seu filho ser tomado de seu colo pelas mãos de um soldado, nem
-                    Ethel nem o soldado
-                    foram vistos novamente, tanto pelos olhos de Horian quanto de os Lusenhuf que logo se fecharam para
-                    nunca mais voltarem
-                    a abrir após ela tirar a própria vida. </p>
-            </div>
-        </main>
+        <p>Após assinar tal decreto, que revoltou parte de seu exército, Horian ordenou que Lusenhuf aceitasse
+            que
+            Ethel não era filho
+            deles e que a criança devia ser morta o quanto antes, pois ela representava uma enorme ameaça,
+            Lusenhuf
+            obviamente não
+            aceitou a decisão de seu marido e viu seu filho ser tomado de seu colo pelas mãos de um soldado, nem
+            Ethel nem o soldado
+            foram vistos novamente, tanto pelos olhos de Horian quanto de os Lusenhuf que logo se fecharam para
+            nunca mais voltarem
+            a abrir após ela tirar a própria vida. </p>
+    </div>
     </div>
     <footer>
         <div class="columns">
@@ -144,16 +130,14 @@
                 <ul>
                     <li>História:</li>
                     <li>Pedro H. Almeida</li>
-                    <li><a
-                            href="mailto:contato@engenheiropedrodealmeida.com.br" class="mail">contato@engenheiropedrodealmeida.com.br</a>
+                    <li><a href="mailto:contato@engenheiropedrodealmeida.com.br"
+                            class="mail">contato@engenheiropedrodealmeida.com.br</a>
                     </li>
                 </ul>
             </div>
-        </div>
     </footer>
     <!--Script pra fechar com click o formulário-->
     <script src="../js/exit_form_modal.js"></script>
-        
 </body>
 
 </html>
