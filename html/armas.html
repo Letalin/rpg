@@ -5,159 +5,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-    <link rel="icon" href="../img/enco.png">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/site.css">
+
+    <link rel="stylesheet" href="../css_boostrap/bootstrap.min.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/armas.css">
-    <link rel="stylesheet" href="../css/formulario.css">
-    <title>Wikia - Armas</title>
+
+    <script type="text/javascript" scr="../js_bootstrap/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" scr="../js_bootstrap/bootstrap.min.js"></script>
+
+    <link rel="icon" href="../img/enco.png">
+
+    <title>Armas</title>
 </head>
 
-<body>
-    <div class="content">
-        <div class="buttom-local">
-            <!--Botão para abrir-->
-            <button onclick="document.getElementById('modal_button').style.display='block'">Cadastre-se</button>
+<body class="container-fluid">
 
-            <!--O proprio modal-->
-            <div id='modal_button' class="modal-button">
-                <span onclick="document.getElementById('modal_button').style.display='none'" class='closed'
-                    title="Fechar negoço" &times></span>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="../html/index.html" id="title">Doença das Almas</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../html/personagens.html">Personagens</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../html/armas.html">Armas</a>
+            </li class="nav-item">
+            <a class="nav-link" href="../html/mapa.html">Mapa</a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cadastre-se</a>
+            </li>
+        </ul>
+    </nav>
 
-                <!--Conteudo do modal-->
-                <div class="adjust-modal">
-                    <form class="modal-content animate">
-                        <label for="unome">Nome</label> <br>
-                        <input type="text" name="nome" required> <br>
-                        <label for="usobre">Sobrenome</label> <br>
-                        <input type="text" name="sobrenome" required> <br>
-                        <label for="uemail">Email</label> <br>
-                        <input type="text" name="email" required> <br>
-
-
-                        <input type="submit" name="botao-cadastrar">
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <h1 class="title">Doença das Almas</h1>
-
-        <main>
-            <aside class="site-navigation">
-                <nav>
-                    <ul>
-                        <li><a href="../html/wikia.html">Prólogo</a></li>
-                        <li><a href="../html/personagens.html">Personagens</a></li>
-                        <li><a href="../html/armas.html">Armas</a></li>
-                        <li><a href="../html/mapa.html">Mapa</a></li>
-                    </ul>
-                </nav>
-            </aside>
-            <h1 class="title-page">Armas</h1>
-            <div class="container">
-                <div>
-                    <table>
+    <div class="row">
+        <div class="col-sm-12 conteudo">
+            <h1>Armas</h1>
+            <div class="table-responsive">
+                <table class="table table-hover table-dark">
+                    <thead>
                         <tr>
-                            <th>&nbsp;</th>
-                            <th>Dano Perfurante</th>
-                            <th>Dano Esmagador</th>
-                            <th>Dano Cortante</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Dano Perfurante</th>
+                            <th scope="col">Dano Esmagador</th>
+                            <th scope="col">Dano Cortante</th>
                         </tr>
+                    <tbody id="alinhamento">
                         <tr>
-                            <th><img src="../img/bow.png" alt="arco" class="image-weapons">Arco Composto</th>
-                            <td>50</td>
-                            <td>0</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <th><img src="../img/dagger.png" alt="adaga" class="image-weapons">Adaga de Bandido</th>
+                            <th><img src="../img/dagger.png" alt="adaga">Adaga </th>
                             <td>100</td>
                             <td>0</td>
                             <td>35</td>
                         </tr>
                         <tr>
-                            <th><img src="../img/axe.png" alt="machado" class="image-weapons">Machado da Tropa</th>
+                            <th><img src="../img/bow.png" alt="arco">Arco Composto</th>
+                            <td>100</td>
+                            <td>0</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th><img src="../img/axe.png" alt="machado">Machado da Tropa</th>
                             <td>10</td>
                             <td>70</td>
                             <td>50</td>
                         </tr>
-                        
                         <tr>
-                            <th><img src="../img/claymore.png" alt="espada-longa" class="image-weapons" >Espada Longa</th>
+                            <th><img src="../img/claymore.png" alt="espada-longa">Espada Longa</th>
                             <td>45</td>
                             <td>30</td>
                             <td>60</td>
                         </tr>
-
                         <tr>
-                            <th><img src="../img/sword.png" alt="espada-da-cura" class="image-weapons">Espada da Cura</th>
+                            <th><img src="../img/sword.png" alt="espada-da-cura">Espada da Cura</th>
                             <td>60</td>
                             <td>10</td>
                             <td>45</td>
                         </tr>
-
                         <tr>
-                            <th><img src="../img/scimitar.png" alt="cimitarra" class="image-weapons">Cimitarra</th>
+                            <th><img src="../img/scimitar.png" alt="cimitarra">Cimitarra</th>
                             <td>30</td>
                             <td>5</td>
                             <td>90</td>
                         </tr>
-
                         <tr>
-                            <th><img src="../img/ultra-greatsword.png" alt="espada-do-julgamento" class="image-weapons">Espada do Julgamento</th>
+                            <th><img src="../img/ultra-greatsword.png" alt="espada-do-julgamento">Espada do Julgamento
+                            </th>
                             <td>30</td>
                             <td>80</td>
                             <td>40</td>
                         </tr>
-                    </table>
-                </div>
-            </div>
-        </main>
-    </div>
-    <footer>
-        <div class="columns">
-            <div class="names">Site Design:</div>
-            <div class="name-left">
-                <ul>
-                    <li>Felipe Almeida</li>
-                    <li>Contato:</li>
-                    <li><a href="mailto:almeida.felipe98@gmail.com" class="mail">almeida.felipe98@gmail.com</a></li>
-                </ul>
-                <ul class="social-networks">
-                    <li><a class="github" href="https://github.com/felipelalmeida" target="_blank">Github</a></li>
-                    <li><a class="linkedin" href="https://www.linkedin.com/in/felipe-almeida-5115b4183/"
-                            target="_blank">LinkedIn</a></li>
-                </ul>
-            </div>
-            <div class="name-right">
-                <ul>
-                    <li>Vinicios Schulze</li>
-                    <li>Contato:</li>
-                    <li><a href="mailto:vine.vinedutra@hotmail.com" class="mail">vine.vinedutra@hotmail.com</a></li>
-                </ul>
-                <ul class="social-networks">
-                    <li><a class="github" href="https://github.com/Hay00" target="_blank">Github</a></li>
-                    <li><a class="linkedin" href="https://www.linkedin.com/in/vinicios-dutra-schulze-2701a8145/"
-                            target="_blank">LinkedIn</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="names">
-                <ul>
-                    <li>História:</li>
-                    <li>Pedro H. Almeida</li>
-                    <li><a
-                            href="mailto:contato@engenheiropedrodealmeida.com.br" class="mail">contato@engenheiropedrodealmeida.com.br</a>
-                    </li>
-                </ul>
+                </table>
             </div>
         </div>
-    </footer>
+    </div>
+    <div class="row">
+        <div class="col-sm-12" id="footer">
+            <ul>
+                <li> Site Design:</li>
+            </ul>
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Felipe Almeida</li>
+                        <li>Contato:</li>
+                        <li><a href="mailto:almeida.felipe98@gmail.com" class="mail">almeida.felipe98@gmail.com</a>
+                        </li>
+                    </ul>
+                    <ul class="social-networks">
+                        <li><a class="github" href="https://github.com/felipelalmeida" target="_blank">Github</a>
+                        </li>
+                        <li><a class="linkedin" href="https://www.linkedin.com/in/felipe-almeida-5115b4183/"
+                                target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Vinicios Schulze</li>
+                        <li>Contato:</li>
+                        <li><a href="mailto:vine.vinedutra@hotmail.com" class="mail">vine.vinedutra@hotmail.com</a>
+                        </li>
+                    </ul>
+                    <ul class="social-networks">
+                        <li><a class="github" href="https://github.com/Hay00" target="_blank">Github</a></li>
+                        <li><a class="linkedin" href="https://www.linkedin.com/in/vinicios-dutra-schulze-2701a8145/"
+                                target="_blank">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul>
+                        <li>História:</li>
+                        <li>Pedro H. Almeida</li>
+                        <li>Contato:</li>
+                        <li><a href="mailto:contato@engenheiropedrodealmeida.com.br"
+                                class="mail">contato@engenheiropedrodealmeida.com.br</a>
+                        </li>
+                    </ul>
+                </div>
 
-    <!--Script pra fechar com click o formulário-->
-    <script src="../js/exit_form_modal.js"></script>
 </body>
 
 </html>

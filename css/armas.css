@@ -1,15 +1,3 @@
-td, th {
-    border: 2px solid black;
-    text-align: center;
+#alinhamento td {
     vertical-align: middle;
-    padding: 15px;
-}
-
-.image-weapons {
-    width: 220px;
-    height: 165px;
-}
-
-.content {
-    min-height: calc(300vh - 70px);
 }

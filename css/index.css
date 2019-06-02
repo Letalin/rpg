@@ -1,35 +1,40 @@
 body {
-    background-image: linear-gradient(0,#ABA77D, #F3EEB4  );
+    background-image: linear-gradient(0, #ABA77D, #F3EEB4);
 }
 
 #title {
     font-size: 200%;
 }
+
 .conteudo {
     margin-top: 5em;
     font-family: 'Cinzel', serif;
     font-size: 20px;
     line-height: 1.5;
     text-align: center;
+    min-height: calc(80vh - 70px);
 }
 
 .conteudo p {
-    width: 45em;
     margin: auto;
     text-align: justify;
 }
+
 #footer {
     padding: 10px;
     background-color: grey;
     margin-bottom: 0;
     text-align: center;
 }
+
 #mail-left {
     text-align: right;
 }
+
 .social-networks li {
     display: inline-block;
 }
+
 .social-networks a {
     display: inline-block;
     width: 40px;
@@ -44,6 +49,7 @@ ul, li {
 .mail {
     color: black;
 }
+
 .mail:hover {
     color: #480792;
 }

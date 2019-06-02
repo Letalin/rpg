@@ -6,10 +6,10 @@
     width: 512px;
     height: 384px;
 }
-
+/* 
 .container {
     text-align: center;
-}
+} */
 
 #map:hover {
     opacity: 0.8;
@@ -72,7 +72,7 @@
 
 .close-map {
     position: absolute;
-    top: 15px;
+    top: 2em;
     right: 35px;
     color: #f1f1f1;
     font-size: 40px;
