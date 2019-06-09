@@ -1,6 +1,5 @@
 body {
     background-image: linear-gradient(0, #ABA77D, #F3EEB4);
-    overflow-x: hidden;                                                                             
 }
 
 #title {
@@ -22,7 +21,6 @@ body {
 }
 
 #footer {
-    padding: 5px;
     background-color: grey;
     text-align: center;
 }
