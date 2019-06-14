@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 
-<?php include('../');?>
+<?php include('../third_party/bootstrap.min.css');?>
 </head>
 <body>
     
