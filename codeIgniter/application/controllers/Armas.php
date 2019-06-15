@@ -12,7 +12,7 @@ class Armas extends CI_Controller
     public function index()
     {
         //Chama a view pra carregar html
-        // $this->load->view('');
+        $this->load->view('Armas_index');
     }
 
     public function adicionar()
