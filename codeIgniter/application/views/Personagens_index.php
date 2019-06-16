@@ -7,16 +7,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="../html/index.html" id="title">Doença das Almas</a>
+        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Doença das Almas</a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="../html/personagens.html">Personagens</a>
+                <a class="nav-link" href="<?php echo base_url("Personagens"); ?>">Personagens</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../html/armas.html">Armas</a>
+                <a class="nav-link" href="<?php echo base_url("Armas"); ?>">Armas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../html/mapa.html">Mapa</a>
+                <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,7 +33,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                     <button type="submit" class="btn btn-secondary">Entrar</button>
                     <div class="dropdown-divider"></div>
-                    <small>Não tem conta? <a href="../html/cadastro.html">Cadastre-se</a></small>
+                    <small>Não tem conta? <a href="Cadastro">Cadastre-se</a></small>
                 </form>
             </div>
         </ul>
@@ -48,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>R. Letalin</div>
                         <div class="art">
-                            <img src="../img/letalin.png" alt="letalin" width="240" height="320" class="image">
+                            <img src="<?php echo base_url("images/letalin.png");?> " alt="letalin" width="240" height="320" class="image">
                             <div class="overlay">
                                 <div class="text">Primeiro e único filho do rei Egjor que ergueu o grande muro de
                                     Folon
@@ -72,7 +72,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Hayoo</div>
                         <div class="art">
-                            <img src="../img/hayoo.jpg" alt="hayoo" class="image">
+                            <img src="<?php echo base_url("images/hayoo.jpg");?>" alt="hayoo" class="image">
                             <div class="overlay">
                                 <div class="text">Criado nas ruas das terras geladas do Alto pela guilda dos ladrões,
                                     ninguém sabe exatamente onde nascera, apenas que sua capacidade de se tornar
@@ -87,7 +87,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Ethel</div>
                         <div class="art">
-                            <img src="../img/ethel.png" alt="ethel" class="image">
+                            <img src="<?php echo base_url("images/ethel.png");?>" alt="ethel" class="image">
                             <div class="overlay">
                                 <div class="text">Filho perdido de Horian e herdeiro do trono vermelho ou, como as
                                     lendas o citam, o filho de Alva, cavaleiro amaldiçoado, fora salvo da morte
@@ -100,7 +100,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Thorello</div>
                         <div class="art">
-                            <img src="../img/thorello.jpg" alt=" " class="image">
+                            <img src="<?php echo base_url("images/thorello.jpg");?>" alt=" " class="image">
                             <div class="overlay">
                                 <div class="text">Melhor amigo do rei louco e experiente estrategista, Thorello se viu
                                     em um

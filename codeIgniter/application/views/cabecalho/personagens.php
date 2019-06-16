@@ -1,0 +1,72 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        .characters li {
+            display: inline-block;
+            padding: 15px;
+        }
+
+        .art {
+            position: relative;
+            width: 345px;
+            height: 460px;
+        }
+
+        .image {
+            display: inline-block;
+            width: 345px;
+            height: 460px;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .overlay:hover {
+            content: '';
+            position: absolute;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.9);
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .art:hover .overlay {
+            height: 100%;
+        }
+
+        .text {
+            white-space: normal;
+            color: white;
+            font-size: 15px;
+            line-height: 1.5;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

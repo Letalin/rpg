@@ -6,16 +6,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="../html/index.html" id="title">Doença das Almas</a>
+        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Doença das Almas</a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="../html/personagens.html">Personagens</a>
+                <a class="nav-link" href="<?php echo base_url("Personagens"); ?>">Personagens</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../html/armas.html">Armas</a>
+                <a class="nav-link" href="<?php echo base_url("Armas"); ?>">Armas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../html/mapa.html">Mapa</a>
+                <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
             <div class="dropdown"> 
                 <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"
@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <button type="submit" class="btn btn-secondary">Entrar</button>
                     <div class="dropdown-divider"></div>
-                    <small>Não tem conta? <a href="../html/cadastro.html">Cadastre-se</a></small>
+                    <small>Não tem conta? <a href="Cadastro">Cadastre-se</a></small>
                 </form>
             </div>
         </ul>

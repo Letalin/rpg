@@ -6,16 +6,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="../html/index.html" id="title">Doença das Almas</a>
+        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Doença das Almas</a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="../html/personagens.html">Personagens</a>
+                <a class="nav-link" href="<?php echo base_url("Personagens"); ?>">Personagens</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../html/armas.html">Armas</a>
+                <a class="nav-link" href="<?php echo base_url("Armas"); ?>">Armas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../html/mapa.html">Mapa</a>
+                <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
             <div class="dropdown">
                 <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,7 +32,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                     <button type="submit" class="btn btn-secondary">Entrar</button>
                     <div class="dropdown-divider"></div>
-                    <small>Não tem conta? <a href="../html/cadastro.html">Cadastre-se</a></small>
+                    <small>Não tem conta? <a href="Cadastro">Cadastre-se</a></small>
                 </form>
             </div>
         </ul>
@@ -53,43 +53,43 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </tr>
                         <tbody id="alinhamento">
                             <tr>
-                                <th><img src="../img/dagger.png" alt="adaga"><br> Adaga </th>
+                                <th><img src="<?php echo base_url("images/dagger.png"); ?>" alt="adaga"><br> Adaga </th>
                                 <td>100</td>
                                 <td>-</td>
                                 <td>35</td>
                             </tr>
                             <tr>
-                                <th><img src="../img/bow.png" alt="arco"><br> Arco Composto</th>
+                                <th><img src="<?php echo base_url("images/bow.png"); ?>" alt="arco"><br> Arco Composto</th>
                                 <td>100</td>
                                 <td>-</td>
                                 <td>10</td>
                             </tr>
                             <tr>
-                                <th><img src="../img/axe.png" alt="machado"><br> Machado da Tropa</th>
+                                <th><img src="<?php echo base_url("images/axe.png"); ?>" alt="machado"><br> Machado da Tropa</th>
                                 <td>10</td>
                                 <td>70</td>
                                 <td>50</td>
                             </tr>
                             <tr>
-                                <th><img src="../img/claymore.png" alt="espada-longa"><br> Espada Longa</th>
+                                <th><img src="<?php echo base_url("images/claymore.png"); ?>" alt="espada-longa"><br> Espada Longa</th>
                                 <td>45</td>
                                 <td>30</td>
                                 <td>60</td>
                             </tr>
                             <tr>
-                                <th><img src="../img/sword.png" alt="espada-da-cura"><br> Espada da Cura</th>
+                                <th><img src="<?php echo base_url("images/sword.png"); ?>" alt="espada-da-cura"><br> Espada da Cura</th>
                                 <td>60</td>
                                 <td>10</td>
                                 <td>45</td>
                             </tr>
                             <tr>
-                                <th><img src="../img/scimitar.png" alt="cimitarra"><br> Cimitarra</th>
+                                <th><img src="<?php echo base_url("images/scimitar.png"); ?>" alt="cimitarra"><br> Cimitarra</th>
                                 <td>30</td>
                                 <td>5</td>
                                 <td>90</td>
                             </tr>
                             <tr>
-                                <th><img src="../img/ultra-greatsword.png" alt="espada-do-julgamento"><br> Espada do
+                                <th><img src="<?php echo base_url("images/ultra-greatsword.png"); ?>" alt="espada-do-julgamento"><br> Espada do
                                     Julgamento
                                 </th>
                                 <td>30</td>

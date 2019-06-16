@@ -12,6 +12,9 @@ class Cadastro extends CI_Controller
     public function index()
     {
         //Chama a view pra carregar html
-        // $this->load->view('');
+        $this->load->view('bootstrap');
+        $this->load->view('cabecalho/inicio');
+        $this->load->view('cabecalho/cadastro');
+        $this->load->view('Cadastro_index');
     }
 }
