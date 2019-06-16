@@ -1,0 +1,1 @@
+CREATE DATABASE memorias_do_caos_antigo;
