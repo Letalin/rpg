@@ -7,7 +7,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Doença das Almas</a>
+        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Sombras do Caos</a>
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Personagens"); ?>">Personagens</a>
@@ -48,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>R. Letalin</div>
                         <div class="art">
-                            <img src="<?php echo base_url("images/letalin.png");?> " alt="letalin" width="240" height="320" class="image">
+                            <img src="<?php echo base_url("images/letalin.png");?> " alt="letalin" class="image">
                             <div class="overlay">
                                 <div class="text">Primeiro e único filho do rei Egjor que ergueu o grande muro de
                                     Folon

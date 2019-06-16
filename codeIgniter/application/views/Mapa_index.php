@@ -1,12 +1,12 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 
 <body>
 
-    
+
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Doença das Almas</a>
+        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Sombras do Caos</a>
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Personagens"); ?>">Personagens</a>
@@ -17,9 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
-            <div class="dropdown"> 
-                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Login
                 </button>
                 <form class="dropdown-menu p-3 ">
@@ -69,8 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="social-networks">
                             <li><a class="github" href="https://github.com/felipelalmeida" target="_blank">Github</a>
                             </li>
-                            <li><a class="linkedin" href="https://www.linkedin.com/in/felipe-almeida-5115b4183/"
-                                    target="_blank">LinkedIn</a></li>
+                            <li><a class="linkedin" href="https://www.linkedin.com/in/felipe-almeida-5115b4183/" target="_blank">LinkedIn</a></li>
                         </ul>
                     </div>
                     <div class="col">
@@ -82,8 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </ul>
                         <ul class="social-networks">
                             <li><a class="github" href="https://github.com/Hay00" target="_blank">Github</a></li>
-                            <li><a class="linkedin" href="https://www.linkedin.com/in/vinicios-dutra-schulze-2701a8145/"
-                                    target="_blank">LinkedIn</a>
+                            <li><a class="linkedin" href="https://www.linkedin.com/in/vinicios-dutra-schulze-2701a8145/" target="_blank">LinkedIn</a>
                             </li>
                         </ul>
                     </div>
@@ -94,8 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li>História:</li>
                             <li>Pedro H. Almeida</li>
                             <li>Contato:</li>
-                            <li><a href="mailto:contato@engenheiropedrodealmeida.com.br"
-                                    class="mail">contato@engenheiropedrodealmeida.com.br</a>
+                            <li><a href="mailto:contato@engenheiropedrodealmeida.com.br" class="mail">contato@engenheiropedrodealmeida.com.br</a>
                             </li>
                         </ul>
                     </div>

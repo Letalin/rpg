@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Doença das Almas</a>
+        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Sombras do Caos</a>
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Personagens"); ?>">Personagens</a>

@@ -5,10 +5,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <html lang="en">
 
 <head>
+
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <style type="text/css">
         body {
             background-image: linear-gradient(0, #ABA77D, #F3EEB4);
+            font-family: 'Cinzel', serif;
         }
 
         #title {
@@ -17,7 +19,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
         .conteudo {
             margin-top: 1em;
-            font-family: 'Cinzel', serif;
             font-size: 20px;
             line-height: 1.5;
             text-align: center;

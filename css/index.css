@@ -1,5 +1,6 @@
 body {
     background-image: linear-gradient(0, #ABA77D, #F3EEB4);
+    font-family: 'Cinzel', serif;
 }
 
 #title {
@@ -8,7 +9,6 @@ body {
 
 .conteudo {
     margin-top: 1em;
-    font-family: 'Cinzel', serif;
     font-size: 20px;
     line-height: 1.5;
     text-align: center;
