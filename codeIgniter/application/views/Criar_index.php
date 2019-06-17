@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="conteudo col">
                 <h1>Cadastro de Personagem</h1>
                 <div class="row">
-                    <div class="col-sm-4 offset-sm-3">
+                    <div class="col-sm-6">
                         <form action="">
                             <div class="form-group">
                                 <label>Nome do personagem</label>
@@ -62,39 +62,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="form-group">
                                 <label for="">Arma Inicial</label>
                                 <select class="form-control">
-                                    <option>Puxar do banco?</option>
+                                    <option>Puxar do banco</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>Origem</label>
-                                <textarea class="form-control" rows="10"></textarea>
+                                <textarea class="form-control" rows="8" maxlength="150"></textarea>
                             </div>
                         </form>
-                        <button type="submit" class="btn btn-secondary btn-lg">Salvar Personagem</button>
                     </div>
-                    <div class="col-sm-4">
-                        <form action="">
-                            <label>Atributos</label>
-                            <div class="col-sm-12">
-                                <div class="col-sm-8">
-                                    <input class="form-control " type="text" placeholder="Força" readonly>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" placeholder="Agilidade" readonly>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" placeholder="Destreza" readonly>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" placeholder="Vida" readonly>
-                                </div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" placeholder="Energia" readonly>
-                                </div>
+                    <div class="col-sm-6">
+                        <label>Atributos</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Força" readonly>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Agilidade" readonly>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Destreza" readonly>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Vida" readonly>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Energia" readonly>
                             </div>
-                        </form>
+                            <div class="col">
+                                <input type="text" class="form-control" readonly>
+                                <br>
+                                <input type="text" class="form-control" readonly>
+                                <br>
+                                <input type="text" class="form-control" readonly>
+                                <br>
+                                <input type="text" class="form-control" readonly>
+                                <br>
+                                <input type="text" class="form-control" readonly>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <button type="submit" class="btn btn-secondary btn-lg">Salvar Personagem</button>
             </div>
         </div>
 

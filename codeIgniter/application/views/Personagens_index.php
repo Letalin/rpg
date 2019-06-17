@@ -7,7 +7,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Sombras do Caos</a>
+        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Memórias do Caos Antigo</a>
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Personagens"); ?>">Personagens</a>
@@ -48,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>R. Letalin</div>
                         <div class="art">
-                            <img src="<?php echo base_url("images/letalin.png");?> " alt="letalin" class="image">
+                            <img src="<?php echo ("https://i.pinimg.com/564x/40/c7/af/40c7af0e1946262f98c8882a877b5a6f.jpg"); ?> " alt="letalin" class="image">
                             <div class="overlay">
                                 <div class="text">Primeiro e único filho do rei Egjor que ergueu o grande muro de
                                     Folon
@@ -72,7 +72,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Hayoo</div>
                         <div class="art">
-                            <img src="<?php echo base_url("images/hayoo.jpg");?>" alt="hayoo" class="image">
+                            <img src="<?php echo("https://i.pinimg.com/564x/ff/93/98/ff9398301f1208a7786e2570932ad832.jpg"); ?>" alt="hayoo" class="image">
                             <div class="overlay">
                                 <div class="text">Criado nas ruas das terras geladas do Alto pela guilda dos ladrões,
                                     ninguém sabe exatamente onde nascera, apenas que sua capacidade de se tornar
@@ -87,7 +87,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Ethel</div>
                         <div class="art">
-                            <img src="<?php echo base_url("images/ethel.png");?>" alt="ethel" class="image">
+                            <img src="<?php echo ("https://i.pinimg.com/564x/51/b9/ed/51b9edfb271c0b56e15e4144603e1a9e.jpg"); ?>" alt="ethel" class="image">
                             <div class="overlay">
                                 <div class="text">Filho perdido de Horian e herdeiro do trono vermelho ou, como as
                                     lendas o citam, o filho de Alva, cavaleiro amaldiçoado, fora salvo da morte
@@ -100,7 +100,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Thorello</div>
                         <div class="art">
-                            <img src="<?php echo base_url("images/thorello.jpg");?>" alt=" " class="image">
+                            <img src="<?php echo ("https://i.pinimg.com/originals/f6/c7/bc/f6c7bc7574d8818d9e0b278f5a0aa191.jpg"); ?>" alt="thorello" class="image">
                             <div class="overlay">
                                 <div class="text">Melhor amigo do rei louco e experiente estrategista, Thorello se viu
                                     em um
@@ -113,9 +113,68 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </div>
                     </li>
                 </ul>
+
+
+                <h1>Inimigos</h1>
+                <ul class="characters">
+                    <li>
+                        <div>Cavaleiro Tempestuoso</div>
+                        <div class="art">
+                            <img src="<?php echo ("https://i.pinimg.com/564x/f2/49/3c/f2493ca1297ecfdf61d16007fde0c2b1.jpg");?>" alt="cavaleiro_tempestuoso" class="image">
+                            <div class="overlay enemy">
+                                <div class="text">
+                                    Valoroso campeão do rei, perdera todo o prestigio que conquistou
+                                    durante anos em batalhas espetaculares quando fora convocado para liderar a força
+                                    espedicionaria vermelha que lutou contra os cavaleiros dos Sinos em uma destas campanhas
+                                    tudo mudou quando deparou-se com uma jóia descrita pelos seus portadores como
+                                    uma dádiva vinda do céu.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Mestre das Trancas</div>
+                        <div class="art">
+                            <img src="<?php echo ("https://cdna.artstation.com/p/assets/images/images/005/038/284/large/ankou-schnee-14361278-1179445815411645-2485188510628170237-o.jpg?1488048710");?>" alt="mestre_das_trancas" class="image">
+                            <div class="overlay enemy">
+                                <div class="text">
+                                    Além de construirem as inumeras estátuas de Teville a chama do céu, também construiram
+                                    as trancas mais seguras de toda a Dônia. Seus segredos acompanhavam-os até o tpumulo
+                                    após completarem um último trabalho a Horian, o Fantasma guarda o maior segredo do
+                                    rei.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Bruxa das Raízes</div>
+                        <div class="art">
+                            <img src="<?php echo ("https://3.bp.blogspot.com/-f0aR0JG-lNE/XAP0z8VFQUI/AAAAAAABpbU/AinoGEzFibEFXd8dc7azquVdXxEtA1e2ACLcBGAs/s1600/andrei-riabovitchev-witch-full-body-v002.jpg");?>" alt="bruxa_das_raizes" class="image">
+                            <div class="overlay enemy">
+                                <div class="text">
+                                    A antiga reinha Vermelha, a qual lhe foi conferida a culpa da traição com os grandes antigos, sucumbiu
+                                    a lâmina de seu amado. A mulher recusou-se a descansar e seu lamento trouxe de volta uma antiga lenda
+                                    a qual a Azaléia e suas raízes absorveram toda a enregia de um determinado local.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Gale</div>
+                        <div class="art">
+                            <img src="<?php echo ("https://i.pinimg.com/originals/72/d7/03/72d7039f9d528aadd3fd6c8f68893ead.jpg");?>" alt="gale" class="image">
+                            <div class="overlay enemy">
+                                <div class="text">
+                                    O antigo guerreiro quebra armaduras, valoroso combatente do exercito vermelho possui um passado nebuloso,
+                                    antigo companheiro de cavaleiro tempestuoso teve contato com um artefato de muito valor creditado a eles pelos
+                                    adoradores de Previan, a origem dos artefatos é incerta.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-
         <div class="row">
             <div class="col-sm-12" id="footer">
                 <ul>
