@@ -7,18 +7,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <head>
     <style type="text/css">
         #map {
-            border-radius: 5px;
             cursor: pointer;
+            /* border-radius: 5px;
             transition: 0.6s;
             margin-left: auto;
             width: 512px;
-            height: 384px;
+            height: 384px; */
         }
-
-        /* 
-.container {
-    text-align: center;
-} */
 
         #map:hover {
             opacity: 0.8;
