@@ -3,9 +3,8 @@ use memorias_do_caos_antigo;
 
 CREATE TABLE inimigo (
     id_inimigo INT NOT NULL AUTO_INCREMENT,
-    descricao VARCHAR(800) NOT NULL,
+    descricao VARCHAR(1000) NOT NULL,
     imagem VARCHAR(500),
-    nome VARCHAR(30) NOT NULL,
     PRIMARY KEY (id_inimigo)
 );
 
@@ -31,15 +30,18 @@ CREATE TABLE arma (
 CREATE TABLE personagem (
     id_personagem INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(20) NOT NULL,
-    origem VARCHAR(800) NOT NULL,
+    origem VARCHAR(1000) NOT NULL,
     imagem VARCHAR(500) NOT NULL,
     arma INT,
     classe INT NOT NULL,
+    usuario INT NOT NULL,
     PRIMARY KEY (id_personagem),
     FOREIGN KEY (arma)
         REFERENCES arma (id_arma),
     FOREIGN KEY (classe)
-        REFERENCES classe (id_classe)
+        REFERENCES classe (id_classe),
+    FOREIGN KEY (usuario)
+        REFERENCES usuario (id_usuario)
 );
 
 CREATE TABLE usuario (
