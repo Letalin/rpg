@@ -7,45 +7,61 @@ class Armas extends CI_Controller
     {
         //Chama modelo para carregar dados
         parent::__construct();
-        //$this->load->model('');
+        $this->load->model('Armas_model');
     }
     public function index()
     {
 
-        /*
-        //Carrega o model
+
         $data['armas'] = $this->Armas_model->selecionar();
-        */
-        //Chama a view pra carregar html
+
         $this->load->view('bootstrap');
         $this->load->view('cabecalho/inicio');
         $this->load->view('cabecalho/armas');
 
         /* Passa os dados para a view
-        //$this->load->view('Armas_index', $data);
+        //$this->load->view('O nome da tua view index ou sla', $data);
         */
         $this->load->view('Armas_index');
     }
 
-    public function adicionar()
+    public function cadastrar()
     {
-        if($_POST){
+
+        if ($_POST) {
             $this->Armas_model->inserir($_POST);
         }
-
-        $this->load->view('bootstrap');
-        $this->load->view('Armas_adicionar');
+        /*
+        Carregar view inicial ou sla!
+        */
     }
 
     public function atualizar($id)
     {
 
-        $this->load->view('bootstrap');
-        $this->load->view('Armas_adicionar');
+
+        if ($_POST) {
+            $this->Armas_model->alterar($id, $_POST);
+        }
+        $data['armas'] = $this->Armas_model->selecionar($id);
+
+        /*
+        Carregar alguma view mostrando que alterou!
+        */
     }
 
-    public function remover($id)
-    { 
+    public function deletar($id)
+    {
 
+
+        $this->Armas_model->remover($id);
+        $data['armas'] = $this->Armas_model->selecionar();
+
+        $this->index();
+        /*
+        ou
+        
+        Carregar alguma view
+        */
     }
 }

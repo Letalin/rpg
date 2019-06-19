@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 
 <body>
@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Memórias do Caos Antigo</a>
         <ul class="navbar-nav">
-        <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Personagens"); ?>">Personagens</a>
             </li>
             <li class="nav-item">
@@ -16,9 +16,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
-            <div class="dropdown"> 
-                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Login
                 </button>
                 <form class="dropdown-menu p-3 ">
@@ -43,21 +42,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="conteudo col-sm-12">
                 <h1>Cadastre-se</h1>
                 <div class="col-sm-4 offset-sm-4">
-                    <form>
+                    <form method="POST" action="<?php echo base_url("Cadastro/cadastrar"); ?>">
                         <div class="form-group">
                             <label>Nome</label>
-                            <input type="text" class="form-control" placeholder="Nome Completo"
-                                style="text-align: center;">
+                            <input type="text" class="form-control" placeholder="Nome Completo" style="text-align: center;" name="nome">
                         </div>
                         <div class="form-group">
                             <label>Endereço de Email</label>
-                            <input type="email" class="form-control" placeholder="Email" style="text-align: center;">
+                            <input type="email" class="form-control" placeholder="Email" style="text-align: center;" name="email">
                         </div>
 
                         <div class="form-group">
                             <label>Senha</label>
-                            <input type="password" class="form-control" placeholder="Senha" style="text-align: center;">
+                            <input type="password" class="form-control" placeholder="Senha" style="text-align: center;" name="senha">
                         </div>
+                        <input type="hidden" name="nivel_acesso" value="1">
                         <input type="submit" class="btn btn-secondary  btn-lg">
                     </form>
                 </div>
@@ -81,8 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="social-networks">
                             <li><a class="github" href="https://github.com/felipelalmeida" target="_blank">Github</a>
                             </li>
-                            <li><a class="linkedin" href="https://www.linkedin.com/in/felipe-almeida-5115b4183/"
-                                    target="_blank">LinkedIn</a></li>
+                            <li><a class="linkedin" href="https://www.linkedin.com/in/felipe-almeida-5115b4183/" target="_blank">LinkedIn</a></li>
                         </ul>
                     </div>
                     <div class="col">
@@ -94,8 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </ul>
                         <ul class="social-networks">
                             <li><a class="github" href="https://github.com/Hay00" target="_blank">Github</a></li>
-                            <li><a class="linkedin" href="https://www.linkedin.com/in/vinicios-dutra-schulze-2701a8145/"
-                                    target="_blank">LinkedIn</a>
+                            <li><a class="linkedin" href="https://www.linkedin.com/in/vinicios-dutra-schulze-2701a8145/" target="_blank">LinkedIn</a>
                             </li>
                         </ul>
                     </div>
@@ -106,8 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li>História:</li>
                             <li>Pedro H. Almeida</li>
                             <li>Contato:</li>
-                            <li><a href="mailto:contato@engenheiropedrodealmeida.com.br"
-                                    class="mail">contato@engenheiropedrodealmeida.com.br</a>
+                            <li><a href="mailto:contato@engenheiropedrodealmeida.com.br" class="mail">contato@engenheiropedrodealmeida.com.br</a>
                             </li>
                         </ul>
                     </div>

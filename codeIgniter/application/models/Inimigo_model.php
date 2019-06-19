@@ -1,59 +1,49 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Inimigo_model extends CI_Model{
+class Inimigo_model extends CI_Model
+{
     public function __construct()
     {
-    parent::__construct();    
+        parent::__construct();
     }
 
     public function inserir($cadastro)
     {
-        /*
-        $this->'atributo1'    	= $cadastro['atributo1'];
-		$this->'atributo2'   		= $cadastro['atributo2'];
+        $this->descricao        = $cadastro['descricao'];
+        $this->imagem           = $cadastro['imagem'];
 
-		if(!$this->db->insert('nome da tabela', $this)) {
-			$this->db->_error_message();
+        if (!$this->db->insert('inimigo', $this)) {
+            $this->db->_error_message();
         }
-        */
     }
 
     public function remover($id)
     {
-        /*
-        if(!$this->db->delete('nome da tabela', "id = $id")) {
-			$this->db->_error_message();
+        if (!$this->db->delete('inimigo', "id = $id")) {
+            $this->db->_error_message();
         }
-        */
     }
 
-    public function alterar($id,$atualizacao)
+    public function alterar($id, $atualizacao)
     {
-        /*
-        $this->'atributo1'   		= $atualizacao['atributo1'];
-		$this->'atributo2'   		= $atualizacao['atributo2'];
+        $this->descricao            = $atualizacao['descricao'];
+        $this->imagem               = $atualizacao['imagem'];
 
-		if(!$this->db->update('nome da tabela', $this, "id = $id")) {
-			$this->db->_error_message();
+        if (!$this->db->update('inimigo', $this, "id = $id")) {
+            $this->db->_error_message();
         }
-        */
     }
 
     public function selecionar()
     {
-        /*
-        $query = $this->db->get('nome da tabela');
+        $query = $this->db->get('inimigo');
         return $query->result();
-        */
     }
 
     public function selecioncar($id)
     {
-        /*
-        $query = $this->db->get_where('nome da tabela', array('id' => $id));
+        $query = $this->db->get_where('inimigo', array('id' => $id));
         return $query->row();
-        */
     }
 }
-?>

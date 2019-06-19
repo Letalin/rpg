@@ -1,59 +1,53 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Armas_model extends CI_Model{
+class Armas_model extends CI_Model
+{
     public function __construct()
     {
-    parent::__construct();    
+        parent::__construct();
     }
 
     public function inserir($cadastro)
     {
-        /*
-        $this->'atributo1'    	= $cadastro['atributo1'];
-		$this->'atributo2'   		= $cadastro['atributo2'];
+        $this->nome                     = $cadastro['nome'];
+        $this->dano_corte               = $cadastro['dano_corte'];
+        $this->dano_perfuracao          = $cadastro['dano_perfuracao'];
+        $this->dano_esmagador           = $cadastro['dano_esmagador'];
 
-		if(!$this->db->insert('nome da tabela', $this)) {
-			$this->db->_error_message();
+        if (!$this->db->insert('arma', $this)) {
+            $this->db->_error_message();
         }
-        */
     }
 
     public function remover($id)
     {
-        /*
-        if(!$this->db->delete('nome da tabela', "id = $id")) {
-			$this->db->_error_message();
+        if (!$this->db->delete('arma', "id = $id")) {
+            $this->db->_error_message();
         }
-        */
     }
 
-    public function alterar($id,$atualizacao)
+    public function alterar($id, $atualizacao)
     {
-        /*
-        $this->'atributo1'   		= $atualizacao['atributo1'];
-		$this->'atributo2'   		= $atualizacao['atributo2'];
+        $this->nome                     = $atualizacao['nome'];
+        $this->dano_corte               = $atualizacao['dano_corte'];
+        $this->dano_perfuracao          = $atualizacao['dano_perfuracao'];
+        $this->dano_esmagador           = $atualizacao['dano_esmagador'];
 
-		if(!$this->db->update('nome da tabela', $this, "id = $id")) {
-			$this->db->_error_message();
+        if (!$this->db->update('arma', $this, "id = $id")) {
+            $this->db->_error_message();
         }
-        */
     }
 
     public function selecionar()
     {
-        /*
-        $query = $this->db->get('nome da tabela');
+        $query = $this->db->get('arma');
         return $query->result();
-        */
     }
 
     public function selecioncar($id)
     {
-        /*
-        $query = $this->db->get_where('nome da tabela', array('id' => $id));
+        $query = $this->db->get_where('arma', array('id' => $id));
         return $query->row();
-        */
     }
-
 }
