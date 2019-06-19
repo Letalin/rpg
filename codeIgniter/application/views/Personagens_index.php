@@ -72,7 +72,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Hayoo</div>
                         <div class="art">
-                            <img src="<?php echo("https://i.pinimg.com/564x/ff/93/98/ff9398301f1208a7786e2570932ad832.jpg"); ?>" alt="hayoo" class="image">
+                            <img src="<?php echo ("https://i.pinimg.com/564x/ff/93/98/ff9398301f1208a7786e2570932ad832.jpg"); ?>" alt="hayoo" class="image">
                             <div class="overlay">
                                 <div class="text">Criado nas ruas das terras geladas do Alto pela guilda dos ladrões,
                                     ninguém sabe exatamente onde nascera, apenas que sua capacidade de se tornar
@@ -120,7 +120,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Cavaleiro Tempestuoso</div>
                         <div class="art">
-                            <img src="<?php echo ("https://i.pinimg.com/564x/f2/49/3c/f2493ca1297ecfdf61d16007fde0c2b1.jpg");?>" alt="cavaleiro_tempestuoso" class="image">
+                            <img src="<?php echo ("https://i.pinimg.com/564x/f2/49/3c/f2493ca1297ecfdf61d16007fde0c2b1.jpg"); ?>" alt="cavaleiro_tempestuoso" class="image">
                             <div class="overlay enemy">
                                 <div class="text">
                                     Valoroso campeão do rei, perdera todo o prestigio que conquistou
@@ -135,7 +135,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Mestre das Trancas</div>
                         <div class="art">
-                            <img src="<?php echo ("https://cdna.artstation.com/p/assets/images/images/005/038/284/large/ankou-schnee-14361278-1179445815411645-2485188510628170237-o.jpg?1488048710");?>" alt="mestre_das_trancas" class="image">
+                            <img src="<?php echo ("https://cdna.artstation.com/p/assets/images/images/005/038/284/large/ankou-schnee-14361278-1179445815411645-2485188510628170237-o.jpg?1488048710"); ?>" alt="mestre_das_trancas" class="image">
                             <div class="overlay enemy">
                                 <div class="text">
                                     Além de construirem as inumeras estátuas de Teville a chama do céu, também construiram
@@ -149,7 +149,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Bruxa das Raízes</div>
                         <div class="art">
-                            <img src="<?php echo ("https://3.bp.blogspot.com/-f0aR0JG-lNE/XAP0z8VFQUI/AAAAAAABpbU/AinoGEzFibEFXd8dc7azquVdXxEtA1e2ACLcBGAs/s1600/andrei-riabovitchev-witch-full-body-v002.jpg");?>" alt="bruxa_das_raizes" class="image">
+                            <img src="<?php echo ("https://3.bp.blogspot.com/-f0aR0JG-lNE/XAP0z8VFQUI/AAAAAAABpbU/AinoGEzFibEFXd8dc7azquVdXxEtA1e2ACLcBGAs/s1600/andrei-riabovitchev-witch-full-body-v002.jpg"); ?>" alt="bruxa_das_raizes" class="image">
                             <div class="overlay enemy">
                                 <div class="text">
                                     A antiga reinha Vermelha, a qual lhe foi conferida a culpa da traição com os grandes antigos, sucumbiu
@@ -162,7 +162,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <li>
                         <div>Gale</div>
                         <div class="art">
-                            <img src="<?php echo ("https://i.pinimg.com/originals/72/d7/03/72d7039f9d528aadd3fd6c8f68893ead.jpg");?>" alt="gale" class="image">
+                            <img src="<?php echo ("https://i.pinimg.com/originals/72/d7/03/72d7039f9d528aadd3fd6c8f68893ead.jpg"); ?>" alt="gale" class="image">
                             <div class="overlay enemy">
                                 <div class="text">
                                     O antigo guerreiro quebra armaduras, valoroso combatente do exercito vermelho possui um passado nebuloso,
@@ -173,8 +173,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </div>
                     </li>
                 </ul>
+
+                <h1>Jogadores</h1>
             </div>
         </div>
+
         <div class="row">
             <div class="col-sm-12" id="footer">
                 <ul>
