@@ -42,12 +42,19 @@ class Personagens extends CI_Controller
 
     public function atualizar($id)
     {
-
-
         if ($_POST) {
             $this->Personagens_model->alterar($id, $_POST);
+
+            $data['personagem'] = $this->Personagens_model->selecionar_todos();
+            redirect('/Personagens');
+        }else{
+            $data['personagem'] = $this->Personagens_model->selecionar($id);
+            $this->load->view('bootstrap');
+            $this->load->view('cabecalho/inicio');
+            $this->load->view('cabecalho/personagens');
+            $this->load->view('Personagens_atualizar',$data);
         }
-        $data['personagens'] = $this->Personagens_model->selecionar($id);
+        
 
         /*
         Carregar alguma view mostrando que alterou!
@@ -67,6 +74,7 @@ class Personagens extends CI_Controller
         
         Carregar alguma view
         */
+        redirect('/Personagens');
     }
 
     /*

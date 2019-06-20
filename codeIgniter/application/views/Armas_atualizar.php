@@ -51,7 +51,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     <div class="row">
         <div class="conteudo col">
-            <h1>Atualizar Arma</h1>
+            <h1>Editar Arma</h1>
             <div class="row">
                 <div class="col-sm-4 offset-sm-4">
                     <form method="post" action="<?php echo base_url("Armas/atualizar/" . $arma->id_arma); ?>">
@@ -75,7 +75,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <label>Imagem</label>
                             <input type="text" class="form-control" placeholder="URL da Imagem" value="<?php echo $arma->imagem ?>" name="imagem">
                         </div>
-                        <button type="submit" class="btn btn-secondary btn-lg">Salvar Alteração da Arma</button>
+                        <button type="submit" class="btn btn-secondary btn-lg">Salvar Alteração</button>
                     </form>
                 </div>
             </div>
