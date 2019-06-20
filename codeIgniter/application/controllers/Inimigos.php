@@ -1,76 +1,67 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Personagens extends CI_Controller
+class Cadastro extends CI_Controller
 {
     public function __construct()
     {
         //Chama modelo para carregar dados
         parent::__construct();
-        $this->load->model('Personagens_model');
+
         $this->load->model('Inimigos_model');
     }
+
     public function index()
     {
-        $data['personagens'] = $this->Personagens_model->selecionar_todos();
-        $data['inimigos'] = $this->Inimigos_model->selecionar_todos();
+
+
+
+        $data['inimigos'] = $this->Inimigos_model->selecionar();
+
+
+        /* Passa os dados para a view
+        //$this->load->view('O nome da tua view index ou sla', $data);
+        */
         //Chama a view pra carregar html
         $this->load->view('bootstrap');
         $this->load->view('cabecalho/inicio');
-        $this->load->view('cabecalho/personagens');
-        $this->load->view('Personagens_index', $data);
     }
 
     public function cadastrar()
     {
         if ($_POST) {
-            $this->Personagens_model->inserir($_POST);
+            $this->Inimigos_model->inserir($_POST);
             redirect('/Personagens');
         } else {
             $this->load->view('bootstrap');
             $this->load->view('cabecalho/inicio');
             $this->load->view('cabecalho/personagens');
-            $this->load->view('Personagens_cadastrar');
+            $this->load->view('Inimigos_cadastrar');
         }
-
-        /*
-        Carregar view inicial ou sla!
-        */
     }
 
     public function atualizar($id)
     {
         if ($_POST) {
-            $this->Personagens_model->alterar($id, $_POST);
-            $data['personagem'] = $this->Personagens_model->selecionar_todos();
+            $this->Inimigos_model->alterar($id, $_POST);
+            $data['inimigos'] = $this->Inimigos_model->selecionarTodos();
             redirect('/Personagens');
         } else {
-            $data['personagem'] = $this->Personagens_model->selecionar($id);
+            $data['inimigos'] = $this->Inimigos_model->selecionar($id);
             $this->load->view('bootstrap');
             $this->load->view('cabecalho/inicio');
             $this->load->view('cabecalho/personagens');
-            $this->load->view('Personagens_atualizar', $data);
+            $this->load->view('Inimigos_atualizar', $data);
         }
-
-
-        /*
-        Carregar alguma view mostrando que alterou!
-        */
     }
 
     public function deletar($id)
     {
-
-
-        $this->Personagens_model->remover($id);
-        $data['personagens'] = $this->Personagens_model->selecionar_todos();
+        $this->Inimigos_model->remover($id);
+        $data['inimigos'] = $this->Inimigos_model->selecionar();
 
         $this->index();
-        /*
-        ou
-        
-        Carregar alguma view
-        */
+
         redirect('/Personagens');
     }
 }
