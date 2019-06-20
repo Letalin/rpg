@@ -7,6 +7,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <head>
 
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d5b5635716.js"></script>
     <style type="text/css">
         body {
             background-image: linear-gradient(0, #ABA77D, #F3EEB4);
@@ -70,6 +71,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
         .linkedin {
             background-image: url(../img/linkedin.png)
         }
+
+        .delete{
+            color: red;
+        }
+        .edit {
+            color:  black;
+        }
+
     </style>
 
     <link rel="icon" href="<?php echo base_url("images/enco.png"); ?>">

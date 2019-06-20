@@ -56,7 +56,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <label>Senha</label>
                             <input type="password" class="form-control" placeholder="Senha" style="text-align: center;" name="senha">
                         </div>
-                        <input type="hidden" name="nivel_acesso" value="0">
+                        <input type="hidden" name="nivel_acesso" value="1">
                         <input type="submit" class="btn btn-secondary  btn-lg">
                     </form>
                 </div>

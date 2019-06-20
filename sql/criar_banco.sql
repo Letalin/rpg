@@ -3,7 +3,7 @@ use memorias_do_caos_antigo;
 
 CREATE TABLE inimigo (
     id_inimigo INT NOT NULL AUTO_INCREMENT,
-    nome VARCHAR(20) NOT NULL,
+    nome VARCHAR(30) NOT NULL,
     descricao VARCHAR(1000) NOT NULL,
     imagem VARCHAR(500),
     PRIMARY KEY (id_inimigo)
@@ -24,7 +24,7 @@ CREATE TABLE classe (
     forca INT NOT NULL,
     destreza INT NOT NULL,
     agilidade INT NOT NULL,
-    nome varchar(15),
+    nome varchar(15) not null,
     PRIMARY KEY (id_classe)
 );
 

@@ -73,12 +73,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                         <td><?php echo $arma->dano_perfuracao ?></td>
                                         <td><?php echo $arma->dano_esmagador ?></td>
                                         <td><?php echo $arma->dano_corte ?></td>
-                                        <td><a href="<?php echo base_url("Armas/atualizar/" . $arma->id_arma); ?>">Editar</a></td>
-                                        <td><a href="<?php echo base_url("Armas/deletar/" . $arma->id_arma); ?>">Excluir</a></td>
+                                        <td><a class="edit" href="<?php echo base_url("Armas/atualizar/" . $arma->id_arma); ?>"><i class="fas fa-edit"></i></a></td>
+                                        <td><a class="delete" href="<?php echo base_url("Armas/deletar/" . $arma->id_arma); ?>"><i class="fas fa-minus-circle"></i></a></td>
                                     </tr>
                                 <?php endforeach ?>
                             <?php endif ?>
-                            <td><br><a href="<?php echo base_url("Armas/cadastrar"); ?>">Adicionar</a><br><br></td>
+                            <td><br><a href="<?php echo base_url("Armas/cadastrar"); ?>"><i class="fas fa-plus-circle"></a></i><br><br></td>
                             <td> </td>
                             <td> </td>
                             <td> </td>
