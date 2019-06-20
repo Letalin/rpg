@@ -68,10 +68,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </div>
                             </div>
                             <br>
-                            <a href="<?php echo base_url(); ?>">Editar</a>
+                            <a class="edit" href="<?php echo base_url(); ?>"><i class="fas fa-edit"></i>Editar</a>
 
                             <br>
-                            <a href="<?php echo base_url(); ?>">Excluir</a>
+                            <a class="delete" href="<?php echo base_url(); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
                             <br>
                         </li>
                     <?php endforeach ?>
@@ -80,7 +80,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </li>
                 </ul>
 
-                <a href="<?php echo base_url(); ?>">Adicionar</a><br><br>
+                <a href="<?php echo base_url(); ?>"><i class="fas fa-plus-circle"></i>Adicionar</a><br><br>
 
                 <h1>Inimigos</h1>
                 <ul class="characters">
@@ -143,7 +143,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <h1>Jogadores</h1>
                 <?php if ($this->session->userdata('usuario_logado')) : ?>
-                    <a href="Jogadores">Criar Jogador</a>
+                    <a href="Jogadores"><i class="fas fa-plus-circle"></i>Criar Jogador</a>
                 <?php endif ?>
             </div>
         </div>
