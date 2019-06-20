@@ -4,4 +4,4 @@ INSERT INTO `memorias_do_caos_antigo`.`arma` ( `nome`, `dano_corte`, `dano_perfu
 INSERT INTO `memorias_do_caos_antigo`.`arma` ( `nome`, `dano_corte`, `dano_perfuracao`, `dano_esmagador`,`imagem`) VALUES ('Espada Longa', '60', '45', '30','images/claymore.png');
 INSERT INTO `memorias_do_caos_antigo`.`arma` ( `nome`, `dano_corte`, `dano_perfuracao`, `dano_esmagador`,`imagem`) VALUES ('Espada da Cura', '45', '60', '10','images/sword.png');
 INSERT INTO `memorias_do_caos_antigo`.`arma` ( `nome`, `dano_corte`, `dano_perfuracao`, `dano_esmagador`,`imagem`) VALUES ('Cimitarra', '90', '30', '5','images/scimitar.png');
-INSERT INTO `memorias_do_caos_antigo`.`arma` ( `nome`, `dano_corte`, `dano_perfuracao`, `dano_esmagador`,`imagem`) VALUES ('Espada do Julgamento', '40', '30', '80','images/ultra-greatsword.png'):
+INSERT INTO `memorias_do_caos_antigo`.`arma` ( `nome`, `dano_corte`, `dano_perfuracao`, `dano_esmagador`,`imagem`) VALUES ('Espada do Julgamento', '40', '30', '80','images/ultra-greatsword.png');

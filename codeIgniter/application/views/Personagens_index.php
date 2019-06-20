@@ -68,19 +68,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </div>
                             </div>
                             <br>
-                            <a class="edit" href="<?php echo base_url(); ?>"><i class="fas fa-edit"></i>Editar</a>
+                            <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel_acesso') == '0')) : ?>
+                                <a class="edit" href="<?php echo base_url(); ?>"><i class="fas fa-edit"></i>Editar</a>
 
-                            <br>
-                            <a class="delete" href="<?php echo base_url(); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
-                            <br>
-                        </li>
+                                <br>
+                                <a class="delete" href="<?php echo base_url(); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
+                                <br>
+                            </li>
+                        <?php endif ?>
                     <?php endforeach ?>
                     <li>
 
                     </li>
                 </ul>
 
-                <a href="<?php echo base_url(); ?>"><i class="fas fa-plus-circle"></i>Adicionar</a><br><br>
+                <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel_acesso') == '0')) : ?>
+                    <a href="<?php echo base_url(); ?>"><i class="fas fa-plus-circle"></i>Adicionar</a><br><br>
+                <?php endif ?>
 
                 <h1>Inimigos</h1>
                 <ul class="characters">
@@ -95,20 +99,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </div>
                             </div>
                             <br>
-                            <a href="<?php echo base_url(); ?>">Editar</a>
+                            <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel_acesso') == '0')) : ?>
+                                <a class="edit" href="<?php echo base_url(); ?>"><i class="fas fa-edit"></i>Editar</a>
 
-                            <br>
-                            <a href="<?php echo base_url(); ?>">Excluir</a>
-                            <br>
-                        </li>
+                                <br>
+                                <a class="delete" href="<?php echo base_url(); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
+                                <br>
+                            </li>
+                        <?php endif ?>
                     <?php endforeach ?>
                     <li>
 
                     </li>
                 </ul>
-
-                <a href="<?php echo base_url(); ?>">Adicionar</a><br><br>
-
+                <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel_acesso') == '0')) : ?>
+                    <a href="<?php echo base_url(); ?>"><i class="fas fa-plus-circle"></i>Adicionar</a><br><br>
+                <?php endif ?>
                 <h1>Jogadores</h1>
                 <?php if ($this->session->userdata('usuario_logado')) : ?>
                     <a href="Jogadores"><i class="fas fa-plus-circle"></i>Criar Jogador</a>
