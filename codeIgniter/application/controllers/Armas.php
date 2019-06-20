@@ -11,9 +11,7 @@ class Armas extends CI_Controller
     }
     public function index()
     {
-
-
-        $data['armas'] = $this->Armas_model->selecionar();
+        $data['armas'] = $this->Armas_model->selecionar_todos();
 
         $this->load->view('bootstrap');
         $this->load->view('cabecalho/inicio');
@@ -22,7 +20,7 @@ class Armas extends CI_Controller
         /* Passa os dados para a view
         //$this->load->view('O nome da tua view index ou sla', $data);
         */
-        $this->load->view('Armas_index');
+        $this->load->view('Armas_index', $data);
     }
 
     public function cadastrar()
@@ -30,10 +28,16 @@ class Armas extends CI_Controller
 
         if ($_POST) {
             $this->Armas_model->inserir($_POST);
-        }
-        /*
+            redirect('/Armas');
+        } else {
+            /*
         Carregar view inicial ou sla!
         */
+            $this->load->view('bootstrap');
+            $this->load->view('cabecalho/inicio');
+            $this->load->view('cabecalho/armas');
+            $this->load->view('Armas_cadastrar');
+        }
     }
 
     public function atualizar($id)
@@ -42,12 +46,20 @@ class Armas extends CI_Controller
 
         if ($_POST) {
             $this->Armas_model->alterar($id, $_POST);
-        }
-        $data['armas'] = $this->Armas_model->selecionar($id);
 
-        /*
+            $data['armas'] = $this->Armas_model->selecionar_todos();
+            redirect('/Armas');
+        } else {
+            $data['arma'] = $this->Armas_model->selecionar($id);
+
+            /*
         Carregar alguma view mostrando que alterou!
         */
+            $this->load->view('bootstrap');
+            $this->load->view('cabecalho/inicio');
+            $this->load->view('cabecalho/armas');
+            $this->load->view('Armas_atualizar', $data);
+        }
     }
 
     public function deletar($id)
@@ -55,13 +67,15 @@ class Armas extends CI_Controller
 
 
         $this->Armas_model->remover($id);
-        $data['armas'] = $this->Armas_model->selecionar();
+        $data['armas'] = $this->Armas_model->selecionar_todos();
 
-        $this->index();
         /*
         ou
         
         Carregar alguma view
         */
+
+
+        redirect('/Armas');
     }
 }

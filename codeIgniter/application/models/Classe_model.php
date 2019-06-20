@@ -23,7 +23,7 @@ class Classe_model extends CI_Model
 
     public function remover($id)
     {
-        if (!$this->db->delete('classe', "id = $id")) {
+        if (!$this->db->delete('classe', "id_classe = $id")) {
             $this->db->_error_message();
         }
     }
@@ -36,20 +36,20 @@ class Classe_model extends CI_Model
         $this->destreza             = $atualizacao['destreza'];
         $this->agilidade            = $atualizacao['agilidade'];
 
-        if (!$this->db->update('classe', $this, "id = $id")) {
+        if (!$this->db->update('classe', $this, "id_classe = $id")) {
             $this->db->_error_message();
         }
     }
 
-    public function selecionar()
+    public function selecionar_todos()
     {
         $query = $this->db->get('classe');
         return $query->result();
     }
 
-    public function selecioncar($id)
+    public function selecionar($id)
     {
-        $query = $this->db->get_where('classe', array('id' => $id));
+        $query = $this->db->get_where('classe', array('id_classe' => $id));
         return $query->row();
     }
 }

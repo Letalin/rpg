@@ -3,9 +3,18 @@ use memorias_do_caos_antigo;
 
 CREATE TABLE inimigo (
     id_inimigo INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(20) NOT NULL,
     descricao VARCHAR(1000) NOT NULL,
     imagem VARCHAR(500),
     PRIMARY KEY (id_inimigo)
+);
+
+CREATE TABLE personagem (
+    id_personagem INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(20) NOT NULL,
+    descricao VARCHAR(1000) NOT NULL,
+    imagem VARCHAR(500),
+    PRIMARY KEY (id_personagem)
 );
 
 CREATE TABLE classe (
@@ -24,24 +33,8 @@ CREATE TABLE arma (
     dano_corte INT NOT NULL,
     dano_perfuracao INT NOT NULL,
     dano_esmagador INT NOT NULL,
+    imagem VARCHAR(500),
     PRIMARY KEY (id_arma)
-);
-
-CREATE TABLE personagem (
-    id_personagem INT NOT NULL AUTO_INCREMENT,
-    nome VARCHAR(20) NOT NULL,
-    origem VARCHAR(1000) NOT NULL,
-    imagem VARCHAR(500) NOT NULL,
-    arma INT,
-    classe INT NOT NULL,
-    usuario INT NOT NULL,
-    PRIMARY KEY (id_personagem),
-    FOREIGN KEY (arma)
-        REFERENCES arma (id_arma),
-    FOREIGN KEY (classe)
-        REFERENCES classe (id_classe),
-    FOREIGN KEY (usuario)
-        REFERENCES usuario (id_usuario)
 );
 
 CREATE TABLE usuario (
@@ -52,3 +45,21 @@ CREATE TABLE usuario (
     nivel_acesso INT NOT NULL,
     PRIMARY KEY (id_usuario)
 );
+
+CREATE TABLE jogador (
+    id_jogador INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(20) NOT NULL,
+    origem VARCHAR(1000) NOT NULL,
+    imagem VARCHAR(500) NOT NULL,
+    arma INT,
+    classe INT NOT NULL,
+    usuario INT NOT NULL,
+    PRIMARY KEY (id_jogador),
+    FOREIGN KEY (arma)
+        REFERENCES arma (id_arma),
+    FOREIGN KEY (classe)
+        REFERENCES classe (id_classe),
+    FOREIGN KEY (usuario)
+        REFERENCES usuario (id_usuario)
+);
+

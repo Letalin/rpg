@@ -24,7 +24,7 @@ class Jogadores_model extends CI_Model
 
     public function remover($id)
     {
-        if (!$this->db->delete('', "id = $id")) {
+        if (!$this->db->delete('', "id_jogador = $id")) {
             $this->db->_error_message();
         }
     }
@@ -38,20 +38,20 @@ class Jogadores_model extends CI_Model
         $this->classe           = $atualizacao['classe'];
         $this->usuario          = $atualizacao['usuario'];
 
-        if (!$this->db->update('', $this, "id = $id")) {
+        if (!$this->db->update('', $this, "id_jogador = $id")) {
             $this->db->_error_message();
         }
     }
 
-    public function selecionar()
+    public function selecionar_todos()
     {
         $query = $this->db->get('');
         return $query->result();
     }
 
-    public function selecioncar($id)
+    public function selecionar($id)
     {
-        $query = $this->db->get_where('', array('id' => $id));
+        $query = $this->db->get_where('', array('id_jogador' => $id));
         return $query->row();
     }
 }

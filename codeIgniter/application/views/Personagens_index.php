@@ -57,75 +57,30 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <h1>Personagens</h1>
                 <ul class="characters">
-                    <li>
-                        <div>R. Letalin</div>
-                        <div class="art">
-                            <img src="<?php echo ("https://i.pinimg.com/564x/40/c7/af/40c7af0e1946262f98c8882a877b5a6f.jpg"); ?> " alt="letalin" class="image">
-                            <div class="overlay">
-                                <div class="text">Primeiro e único filho do rei Egjor que ergueu o grande muro de
-                                    Folon
-                                    separando seu reino do restante de Dônia após o caos instaurado na Revolta
-                                    vermelha.
-                                    Desde cedo demonstrou grande afeição para a magia, o que fez com que tivesse uma
-                                    educação de
-                                    qualidade
-                                    com os estudiosos do Alto contratados a peso de Enco, seu grande professor,
-                                    Advlir,
-                                    o
-                                    mestre da matilha, ensinou-o a poderosa habilidade de invocar cães espirituais
-                                    sempre
-                                    que necessitasse de proteção, movido pela curiosidade do que havia além da
-                                    muralha,
-                                    Letalin lançou-se em uma aventura com mais três estranhos às margens do Jarnh.
+                    <?php foreach ($personagens as $personagem) : ?>
+                        <li>
+                            <div><?php echo $personagem->nome ?></div>
+                            <div class="art">
+                                <img src="<?php echo $personagem->imagem; ?> " class="image">
+                                <div class="overlay">
+                                    <div class="text"><?php echo $personagem->descricao ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
+                            <br>
+                            <a href="<?php echo base_url(); ?>">Editar</a>
+
+                            <br>
+                            <a href="<?php echo base_url(); ?>">Excluir</a>
+                            <br>
+                        </li>
+                    <?php endforeach ?>
                     <li>
-                        <div>Hayoo</div>
-                        <div class="art">
-                            <img src="<?php echo ("https://i.pinimg.com/564x/ff/93/98/ff9398301f1208a7786e2570932ad832.jpg"); ?>" alt="hayoo" class="image">
-                            <div class="overlay">
-                                <div class="text">Criado nas ruas das terras geladas do Alto pela guilda dos ladrões,
-                                    ninguém sabe exatamente onde nascera, apenas que sua capacidade de se tornar
-                                    invisível parecia ser um dom.
-                                    Ordenado pelos seus mestres, Hayoo viajou ao longo do Jarnh até a grande muralha de
-                                    Folon, onde deveria encontrar o principe e persuadí-lo a ir até
-                                    Alto em uma falsa aventura onde a guilda poderia trancafiá-lo e extrair informações
-                                    importantes.</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>Ethel</div>
-                        <div class="art">
-                            <img src="<?php echo ("https://i.pinimg.com/564x/51/b9/ed/51b9edfb271c0b56e15e4144603e1a9e.jpg"); ?>" alt="ethel" class="image">
-                            <div class="overlay">
-                                <div class="text">Filho perdido de Horian e herdeiro do trono vermelho ou, como as
-                                    lendas o citam, o filho de Alva, cavaleiro amaldiçoado, fora salvo da morte
-                                    prematura pelo melhor amigo do rei e acolhido pelos vigilantes da floresta, onde
-                                    aprendeu a guerrear como nenhum outro e a controlar sua incomum perseverança, que
-                                    alguns atribuem à sua origem sobrenatural.</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>Thorello</div>
-                        <div class="art">
-                            <img src="<?php echo ("https://i.pinimg.com/originals/f6/c7/bc/f6c7bc7574d8818d9e0b278f5a0aa191.jpg"); ?>" alt="thorello" class="image">
-                            <div class="overlay">
-                                <div class="text">Melhor amigo do rei louco e experiente estrategista, Thorello se viu
-                                    em um
-                                    impasse, deveria proteger o seu afilhado ou atender aos desejos de seu rei
-                                    decadente? Thorello fugiu levando consigo o pequeno Ethel para as florestas ao leste
-                                    onde ajudou a reerguer o grupo de vigilantes da floresta longe de toda
-                                    a insanidade e carnificina que o exército de Horian estava protagonizando após as
-                                    desavenças com a crença de Teville.</div>
-                            </div>
-                        </div>
+
                     </li>
                 </ul>
 
+                <a href="<?php echo base_url(); ?>">Adicionar</a><br><br>
 
                 <h1>Inimigos</h1>
                 <ul class="characters">
@@ -187,6 +142,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </ul>
 
                 <h1>Jogadores</h1>
+                <?php if ($this->session->userdata('usuario_logado')) : ?>
+                    <a href="Jogadores">Criar Jogador</a>
+                <?php endif ?>
             </div>
         </div>
 

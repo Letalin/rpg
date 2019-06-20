@@ -22,7 +22,7 @@ class Usuarios_model extends CI_Model
 
     public function remover($id)
     {
-        if (!$this->db->delete('usuario', "id = $id")) {
+        if (!$this->db->delete('usuario', "id_usuario = $id")) {
             $this->db->_error_message();
         }
     }
@@ -34,20 +34,20 @@ class Usuarios_model extends CI_Model
         $this->nome                = $atualizacao['nome'];
         $this->nivel_acesso       = $atualizacao['nivel_acesso'];
 
-        if (!$this->db->update('usuario', $this, "id = $id")) {
+        if (!$this->db->update('usuario', $this, "id_usuario = $id")) {
             $this->db->_error_message();
         }
     }
 
-    public function selecionar()
+    public function selecionar_todos()
     {
         $query = $this->db->get('usuario');
         return $query->result();
     }
 
-    public function selecioncar($id)
+    public function selecionar($id)
     {
-        $query = $this->db->get_where('usuario', array('id' => $id));
+        $query = $this->db->get_where('usuario', array('id_usuario' => $id));
         return $query->row();
     }
 

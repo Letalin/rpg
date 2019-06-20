@@ -5,16 +5,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="../html/index.html" id="title">Sombras do Caos</a>
+        <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Memórias do Caos Antigo</a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="../html/personagens.html">Personagens</a>
+                <a class="nav-link" href="<?php echo base_url("Personagens"); ?>">Personagens</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../html/armas.html">Armas</a>
+                <a class="nav-link" href="<?php echo base_url("Armas"); ?>">Armas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../html/mapa.html">Mapa</a>
+                <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
             <?php if ($this->session->userdata('usuario_logado')) : ?>
 
@@ -82,6 +82,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                         </form>
                     </div>
+                    <br>
                     <div class="col-sm-6">
                         <label>Atributos</label>
                         <div class="row">

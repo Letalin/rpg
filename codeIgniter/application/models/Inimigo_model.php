@@ -20,7 +20,7 @@ class Inimigo_model extends CI_Model
 
     public function remover($id)
     {
-        if (!$this->db->delete('inimigo', "id = $id")) {
+        if (!$this->db->delete('inimigo', "id_inimigo = $id")) {
             $this->db->_error_message();
         }
     }
@@ -30,20 +30,20 @@ class Inimigo_model extends CI_Model
         $this->descricao            = $atualizacao['descricao'];
         $this->imagem               = $atualizacao['imagem'];
 
-        if (!$this->db->update('inimigo', $this, "id = $id")) {
+        if (!$this->db->update('inimigo', $this, "id_inimigo = $id")) {
             $this->db->_error_message();
         }
     }
 
-    public function selecionar()
+    public function selecionar_todos()
     {
         $query = $this->db->get('inimigo');
         return $query->result();
     }
 
-    public function selecioncar($id)
+    public function selecionar($id)
     {
-        $query = $this->db->get_where('inimigo', array('id' => $id));
+        $query = $this->db->get_where('inimigo', array('id_inimigo' => $id));
         return $query->row();
     }
 }

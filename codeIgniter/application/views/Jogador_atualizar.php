@@ -4,7 +4,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body>
 
-
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Memórias do Caos Antigo</a>
         <ul class="navbar-nav">
@@ -17,8 +16,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
-
-
             <?php if ($this->session->userdata('usuario_logado')) : ?>
 
                 <li class="nav-item">
@@ -54,40 +51,70 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-8 offset-sm-2 conteudo">
-                <h1>Armas</h1>
-                <div class="table-responsive">
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Dano Perfurante</th>
-                                <th scope="col">Dano Esmagador</th>
-                                <th scope="col">Dano Cortante</th>
-                            </tr>
-                        <tbody id="alinhamento">
-                            <?php if (isset($armas)) : ?>
-                                <?php foreach ($armas as $arma) : ?>
-                                    <tr>
-                                        <th><img src="<?php echo ($arma->imagem) ?>" alt=""><br><?php echo $arma->nome ?></th>
-                                        <td><?php echo $arma->dano_perfuracao ?></td>
-                                        <td><?php echo $arma->dano_esmagador ?></td>
-                                        <td><?php echo $arma->dano_corte ?></td>
-                                        <td><a href="<?php echo base_url("Armas/atualizar/" . $arma->id_arma); ?>">Editar</a></td>
-                                        <td><a href="<?php echo base_url("Armas/deletar/" . $arma->id_arma); ?>">Excluir</a></td>
-                                    </tr>
-                                <?php endforeach ?>
-                            <?php endif ?>
-                            <td><br><a href="<?php echo base_url("Armas/cadastrar"); ?>">Adicionar</a><br><br></td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                    </table>
+            <div class="conteudo col">
+                <h1>Editar Personagem</h1>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form action="">
+                            <div class="form-group">
+                                <label>Nome do personagem</label>
+                                <input type="text" class="form-control" placeholder="Nick Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Classe</label>
+                                <select class="form-control">
+                                    <option>Guerreiro</option>
+                                    <option>Ladino</option>
+                                    <option>Mago</option>
+                                    <option>Paladino</option>
+                                    <option>Arqueiro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Arma Inicial</label>
+                                <select class="form-control">
+                                    <option>Puxar do banco</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Origem</label>
+                                <textarea class="form-control" rows="8" maxlength="150"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                        <label>Atributos</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Força" readonly>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Agilidade" readonly>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Destreza" readonly>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Vida" readonly>
+                                <br>
+                                <input type="text" class="form-control" placeholder="Energia" readonly>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" readonly>
+                                <br>
+                                <input type="text" class="form-control" readonly>
+                                <br>
+                                <input type="text" class="form-control" readonly>
+                                <br>
+                                <input type="text" class="form-control" readonly>
+                                <br>
+                                <input type="text" class="form-control" readonly>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <button type="submit" class="btn btn-secondary btn-lg">Salvar Personagem</button>
             </div>
         </div>
+
         <div class="row">
             <div class="col-sm-12" id="footer">
                 <ul>
@@ -132,4 +159,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 </body>

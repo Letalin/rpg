@@ -17,7 +17,7 @@ class Cadastro extends CI_Controller
     public function index()
     {
 
-        $data['usuarios'] = $this->Usuarios_model->selecionar();
+        $data['usuarios'] = $this->Usuarios_model->selecionar_todos();
 
         /*
         $data['nome da tua variavel em plural'] = $this->"Nome do teu modelo"->selecionar();
@@ -75,7 +75,7 @@ class Cadastro extends CI_Controller
     public function deletar($id)
     { 
         $this->Usuarios_model->remover($id);
-        $data['usuarios'] = $this->Usuarios_model->selecionar();
+        $data['usuarios'] = $this->Usuarios_model->selecionar_todos();
 
         $this->index();
 

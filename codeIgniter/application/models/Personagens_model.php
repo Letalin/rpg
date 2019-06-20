@@ -11,10 +11,8 @@ class Personagens_model extends CI_Model
     public function inserir($cadastro)
     {
         $this->nome             = $cadastro['nome'];
-        $this->origem           = $cadastro['origem'];
+        $this->descricao             = $cadastro['descricao'];
         $this->imagem           = $cadastro['imagem'];
-        $this->arma             = $cadastro['arma'];
-        $this->classe           = $cadastro['classe'];
         $this->usuario          = $cadastro['usuario'];
 
         if (!$this->db->insert('personagem', $this)) {
@@ -24,7 +22,7 @@ class Personagens_model extends CI_Model
 
     public function remover($id)
     {
-        if (!$this->db->delete('personagem', "id = $id")) {
+        if (!$this->db->delete('personagem', "id_personagem = $id")) {
             $this->db->_error_message();
         }
     }
@@ -32,26 +30,24 @@ class Personagens_model extends CI_Model
     public function alterar($id, $atualizacao)
     {
         $this->nome             = $atualizacao['nome'];
-        $this->origem           = $atualizacao['origem'];
+        $this->descricao             = $atualizacao['descricao'];
         $this->imagem           = $atualizacao['imagem'];
-        $this->arma             = $atualizacao['arma'];
-        $this->classe           = $atualizacao['classe'];
         $this->usuario          = $atualizacao['usuario'];
 
-        if (!$this->db->update('personagem', $this, "id = $id")) {
+        if (!$this->db->update('personagem', $this, "id_personagem = $id")) {
             $this->db->_error_message();
         }
     }
 
-    public function selecionar()
+    public function selecionar_todos()
     {
         $query = $this->db->get('personagem');
         return $query->result();
     }
 
-    public function selecioncar($id)
+    public function selecionar($id)
     {
-        $query = $this->db->get_where('personagem', array('id' => $id));
+        $query = $this->db->get_where('personagem', array('id_personagem' => $id));
         return $query->row();
     }
 }
