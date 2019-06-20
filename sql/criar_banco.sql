@@ -1,5 +1,15 @@
+drop database if exists memorias_do_caos_antigo;
 create database memorias_do_caos_antigo;
 use memorias_do_caos_antigo;
+
+CREATE TABLE usuario (
+    id_usuario INT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(50) NOT NULL,
+    senha VARCHAR(60) NOT NULL,
+    nome VARCHAR(50) NOT NULL,
+    nivel_acesso INT NOT NULL,
+    PRIMARY KEY (id_usuario)
+);
 
 CREATE TABLE inimigo (
     id_inimigo INT NOT NULL AUTO_INCREMENT,
@@ -42,15 +52,6 @@ CREATE TABLE arma (
     dano_esmagador INT NOT NULL,
     imagem VARCHAR(500),
     PRIMARY KEY (id_arma)
-);
-
-CREATE TABLE usuario (
-    id_usuario INT NOT NULL AUTO_INCREMENT,
-    email VARCHAR(50) NOT NULL,
-    senha VARCHAR(60) NOT NULL,
-    nome VARCHAR(50) NOT NULL,
-    nivel_acesso INT NOT NULL,
-    PRIMARY KEY (id_usuario)
 );
 
 CREATE TABLE jogador (
