@@ -79,6 +79,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
             color:  black;
         }
 
+        .align {
+            text-align: center;
+        }
     </style>
 
     <link rel="icon" href="<?php echo base_url("images/enco.png"); ?>">

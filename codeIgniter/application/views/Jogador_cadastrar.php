@@ -62,14 +62,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                             <div class="form-group">
                                 <label>Classe</label>
-                                <select class="form-control">
-                                    <option>Guerreiro</option>
-                                    <option>Ladino</option>
-                                    <option>Mago</option>
-                                    <option>Paladino</option>
-                                    <option>Arqueiro</option>
+                                <select class="form-control" name="classes" id="classes_tipo">
+                                    <option value="qq">Guerreiro</option>
+                                    <option value="ww">Ladino</option>
+                                    <option value="eeW">Mago</option>
+                                    <option value="">Paladino</option>
+                                    <option value="">Arqueiro</option>
                                 </select>
                             </div>
+
+                            <script>
+                                // init
+                                $('.atributos').val($('#classes_tipo option:selected').val());
+                                //on selecting
+                                $('#classes_tipo').on('change', function() {
+                                    $('.atributos').val($(this).find('option:selected').val());
+                                })
+                            </script>
+
                             <div class="form-group">
                                 <label for="">Arma Inicial</label>
                                 <select class="form-control">
@@ -92,26 +102,26 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <label>Atributos</label>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Força" readonly>
+                                <input type="text" class="form-control align" placeholder="Força" readonly>
                                 <br>
-                                <input type="text" class="form-control" placeholder="Agilidade" readonly>
+                                <input type="text" class="form-control align" placeholder="Agilidade" readonly>
                                 <br>
-                                <input type="text" class="form-control" placeholder="Destreza" readonly>
+                                <input type="text" class="form-control align" placeholder="Destreza" readonly>
                                 <br>
-                                <input type="text" class="form-control" placeholder="Vida" readonly>
+                                <input type="text" class="form-control align" placeholder="Vida" readonly>
                                 <br>
-                                <input type="text" class="form-control" placeholder="Energia" readonly>
+                                <input type="text" class="form-control align" placeholder="Energia" readonly>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" readonly>
+                                <input type="text" class="form-control align atributos" readonly>
                                 <br>
-                                <input type="text" class="form-control" readonly>
+                                <input type="text" class="form-control align atributos" readonly>
                                 <br>
-                                <input type="text" class="form-control" readonly>
+                                <input type="text" class="form-control align atributos" readonly>
                                 <br>
-                                <input type="text" class="form-control" readonly>
+                                <input type="text" class="form-control align atributos" readonly>
                                 <br>
-                                <input type="text" class="form-control" readonly>
+                                <input type="text" class="form-control align atributos" readonly>
                             </div>
                         </div>
                     </div>
@@ -119,22 +129,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <button type="submit" class="btn btn-secondary btn-lg">Salvar Personagem</button>
             </div>
         </div>
-
-        <select name="col_name" id="col_name">
-            <option value="01" id="1">First fdhfdg</option>
-            <option value="middle_name" id="2">Middle Sete</option>
-            <option value="second_name" id="3">Second Nine</option>
-        </select>
-
-        // init
-        <script>
-            $('#textbox').val($('#col_name option:selected').val());
-            //on selecting
-            $('#col_name').on('change', function() {
-                $('#textbox').val($(this).find('option:selected').val());
-            })
-        </script>
-        <input type="text" name="col_title" id="textbox" />
 
         <div class="row">
             <div class="col-sm-12" id="footer">
