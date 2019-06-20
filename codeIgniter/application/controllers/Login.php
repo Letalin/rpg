@@ -20,12 +20,14 @@ class Login extends CI_Controller
 
         if ($validacao) {
             echo 'if';
+            $id = $validacao['id_usuario'];
             $nome = $validacao['nome'];
             $email = $validacao['email'];
             $nivel = $validacao['nivel_acesso'];
 
             $user_data = array(
                 'nome_usuario' => $nome,
+                'id_usuario' => $id,
                 'email' => $email,
                 'nivel' => $nivel,
                 'usuario_logado' => TRUE

@@ -51,31 +51,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     <div class="row">
         <div class="conteudo col">
-            <h1>Criar Arma</h1>
+            <h1>Criar Personagem</h1>
             <div class="row">
                 <div class="col-sm-4 offset-sm-4">
-                    <form method="post" action="<?php echo base_url("Armas/cadastrar"); ?>">
+                    <form method="POST" action="<?php echo base_url("Personagens/cadastrar"); ?>">
                         <div class="form-group">
-                            <label>Nome da Arma</label>
-                            <input type="text" class="form-control" placeholder="Nomeie sua espada" name="nome">
+                            <label>Nome do Personagem</label>
+                            <input type="text" class="form-control" placeholder="Nomeie sua Personagem" name="nome">
                         </div>
                         <div class="form-group">
-                            <label>Dano Perfurante</label>
-                            <input type="text" class="form-control" placeholder="Furar" name="dano_perfuracao">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Dano Esmagador</label>
-                            <input type="text" class="form-control" placeholder="Esmagar" name="dano_esmagador">
-                        </div>
-                        <div class="form-group">
-                            <label>Dano Cortante</label>
-                            <input type="text" class="form-control" placeholder="Cortar" name="dano_corte">
+                            <label>Origem</label>
+                            <textarea class="form-control" rows="8" maxlength="150" name="descricao"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Imagem</label>
                             <input type="text" class="form-control" placeholder="URL da Imagem" name="imagem">
                         </div>
-                        <button type="submit" class="btn btn-secondary btn-lg">Salvar Arma</button>
+                        <input type="hidden" name="usuario" value="<?php echo $this->session->userdata('id_usuario'); ?>">
+                        <button type="submit" class="btn btn-secondary btn-lg">Salvar Personagem</button>
                     </form>
                 </div>
             </div>

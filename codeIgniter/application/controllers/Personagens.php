@@ -27,6 +27,12 @@ class Personagens extends CI_Controller
 
         if ($_POST) {
             $this->Personagens_model->inserir($_POST);
+            redirect('/Personagens'); 
+         }else{
+            $this->load->view('bootstrap');
+            $this->load->view('cabecalho/inicio');
+            $this->load->view('cabecalho/personagens');
+            $this->load->view('Personagens_cadastrar');
         }
 
         /*
