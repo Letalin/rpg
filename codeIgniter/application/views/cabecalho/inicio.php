@@ -6,12 +6,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <head>
 
-    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Mate+SC&display=swap" rel="stylesheet">
+
+
     <script src="https://kit.fontawesome.com/d5b5635716.js"></script>
     <style type="text/css">
         body {
             background-image: linear-gradient(0, #ABA77D, #F3EEB4);
-            font-family: 'Cinzel', serif;
+            font-family: 'Mate SC', serif;   
         }
 
         #title {
@@ -20,7 +22,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
         .conteudo {
             margin-top: 1em;
-            font-size: 20px;
+            font-size: 22px;
             line-height: 1.5;
             text-align: center;
             min-height: calc(80vh - 70px);
@@ -72,11 +74,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
             background-image: url(../img/linkedin.png)
         }
 
-        .delete{
+        .delete {
             color: red;
         }
+
         .edit {
-            color:  black;
+            color: black;
         }
 
         .align {
