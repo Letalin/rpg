@@ -6,7 +6,10 @@ CREATE TABLE inimigo (
     nome VARCHAR(30) NOT NULL,
     descricao VARCHAR(1000) NOT NULL,
     imagem VARCHAR(500),
-    PRIMARY KEY (id_inimigo)
+    usuario INT NOT NULL,
+    PRIMARY KEY (id_inimigo),
+    FOREIGN KEY (usuario)
+        REFERENCES usuario (id_usuario)
 );
 
 CREATE TABLE personagem (
@@ -14,7 +17,10 @@ CREATE TABLE personagem (
     nome VARCHAR(20) NOT NULL,
     descricao VARCHAR(1000) NOT NULL,
     imagem VARCHAR(500),
-    PRIMARY KEY (id_personagem)
+    usuario INT NOT NULL,
+    PRIMARY KEY (id_personagem),
+    FOREIGN KEY (usuario)
+        REFERENCES usuario (id_usuario)
 );
 
 CREATE TABLE classe (
