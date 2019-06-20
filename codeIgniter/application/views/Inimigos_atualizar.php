@@ -54,14 +54,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <h1>Editar Inimigo</h1>
             <div class="row">
                 <div class="col-sm-4 offset-sm-4">
-                    <form method="POST" action="<?php echo base_url("Inimimgos/atualizar/".$inimigo->inimigo); ?>">
+                    <form method="POST" action="<?php echo base_url("Inimigos/atualizar/".$inimigo->id_inimigo); ?>">
                         <div class="form-group">
                             <label>Nome do Inimigo</label>
-                            <input type="text" class="form-control" placeholder="Nomeie seu Inimimgo" name="nome" value="<?php echo $inimigo->nome ?>">
+                            <input type="text" class="form-control" placeholder="Nomeie seu Inimigos" name="nome" value="<?php echo $inimigo->nome ?>">
                         </div>
                         <div class="form-group">
                             <label>Origem</label>
-                            <textarea class="form-control" rows="8" maxlength="150" name="descricao"><?php echo $persoinimigonagem->descricao ?></textarea>
+                            <textarea class="form-control" rows="8" maxlength="150" name="descricao"><?php echo $inimigo->descricao ?></textarea>
                         </div>
                         <div class="form-group">
                             <label>Imagem</label>

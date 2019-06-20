@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Cadastro extends CI_Controller
+class Inimigos extends CI_Controller
 {
     public function __construct()
     {
@@ -16,7 +16,7 @@ class Cadastro extends CI_Controller
 
 
 
-        $data['inimigos'] = $this->Inimigos_model->selecionar();
+        $data['inimigos'] = $this->Inimigos_model->selecionar_todos();
 
 
         /* Passa os dados para a view
@@ -25,6 +25,8 @@ class Cadastro extends CI_Controller
         //Chama a view pra carregar html
         $this->load->view('bootstrap');
         $this->load->view('cabecalho/inicio');
+        $this->load->view('cabecalho/personagens');
+        $this->load->view('Personagens_index', $data);
     }
 
     public function cadastrar()
@@ -44,10 +46,10 @@ class Cadastro extends CI_Controller
     {
         if ($_POST) {
             $this->Inimigos_model->alterar($id, $_POST);
-            $data['inimigos'] = $this->Inimigos_model->selecionarTodos();
+            $data['inimigos'] = $this->Inimigos_model->selecionar_todos();
             redirect('/Personagens');
         } else {
-            $data['inimigos'] = $this->Inimigos_model->selecionar($id);
+            $data['inimigo'] = $this->Inimigos_model->selecionar($id);
             $this->load->view('bootstrap');
             $this->load->view('cabecalho/inicio');
             $this->load->view('cabecalho/personagens');
@@ -58,7 +60,7 @@ class Cadastro extends CI_Controller
     public function deletar($id)
     {
         $this->Inimigos_model->remover($id);
-        $data['inimigos'] = $this->Inimigos_model->selecionar();
+        $data['inimigos'] = $this->Inimigos_model->selecionar_todos();
 
         $this->index();
 

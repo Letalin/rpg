@@ -72,10 +72,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <a class="edit" href="<?php echo base_url("Personagens/atualizar/" . $personagem->id_personagem); ?>"><i class="fas fa-edit"></i>Editar</a>
 
                                 <br>
-                                <a class="delete" href="<?php echo base_url("Personagens/deletar/". $personagem->id_personagem); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
+                                <a class="delete" href="<?php echo base_url("Personagens/deletar/" . $personagem->id_personagem); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
                                 <br>
-                                <?php endif ?>
-                            </li>
+                            <?php endif ?>
+                        </li>
                     <?php endforeach ?>
                     <li>
 
@@ -100,10 +100,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                             <br>
                             <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel') == '0')) : ?>
-                                <a class="edit" href="<?php echo base_url(); ?>"><i class="fas fa-edit"></i>Editar</a>
+                                <a class="edit" href="<?php echo base_url('Inimigos/atualizar/' . $inimigo->id_inimigo); ?>"><i class="fas fa-edit"></i>Editar</a>
 
                                 <br>
-                                <a class="delete" href="<?php echo base_url(); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
+                                <a class="delete" href="<?php echo base_url('Inimigos/deletar/' . $inimigo->id_inimigo); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
                                 <br>
                             </li>
                         <?php endif ?>
@@ -113,8 +113,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </li>
                 </ul>
                 <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel') == '0')) : ?>
-                    <a href="<?php echo base_url(); ?>"><i class="fas fa-plus-circle"></i>Adicionar</a><br><br>
+                    <a href="<?php echo base_url('Inimigos/cadastrar'); ?>"><i class="fas fa-plus-circle"></i>Adicionar</a><br><br>
                 <?php endif ?>
+
+
+
                 <h1>Jogadores</h1>
                 <?php if ($this->session->userdata('usuario_logado')) : ?>
                     <a href="Jogadores"><i class="fas fa-plus-circle"></i>Criar Jogador</a>
