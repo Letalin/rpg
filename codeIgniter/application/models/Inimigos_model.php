@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Inimigo_model extends CI_Model
+class Inimigos_model extends CI_Model
 {
     public function __construct()
     {
@@ -10,8 +10,10 @@ class Inimigo_model extends CI_Model
 
     public function inserir($cadastro)
     {
-        $this->descricao        = $cadastro['descricao'];
+        $this->nome             = $cadastro['nome'];
+        $this->descricao             = $cadastro['descricao'];
         $this->imagem           = $cadastro['imagem'];
+        $this->usuario          = $cadastro['usuario'];
 
         if (!$this->db->insert('inimigo', $this)) {
             $this->db->_error_message();
@@ -27,8 +29,10 @@ class Inimigo_model extends CI_Model
 
     public function alterar($id, $atualizacao)
     {
-        $this->descricao            = $atualizacao['descricao'];
-        $this->imagem               = $atualizacao['imagem'];
+        $this->nome             = $atualizacao['nome'];
+        $this->descricao             = $atualizacao['descricao'];
+        $this->imagem           = $atualizacao['imagem'];
+        $this->usuario          = $atualizacao['usuario'];
 
         if (!$this->db->update('inimigo', $this, "id_inimigo = $id")) {
             $this->db->_error_message();

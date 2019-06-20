@@ -58,7 +58,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <form action="">
                             <div class="form-group">
                                 <label>Nome do personagem</label>
-                                <input type="text" class="form-control" placeholder="Nick Name">
+                                <input type="text" class="form-control" placeholder="Nick Name" name="nome">
                             </div>
                             <div class="form-group">
                                 <label>Classe</label>
@@ -78,7 +78,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </div>
                             <div class="form-group">
                                 <label>Origem</label>
-                                <textarea class="form-control" rows="8" maxlength="150"></textarea>
+                                <textarea class="form-control" rows="8" maxlength="150" name="origem"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Imagem</label>
+                                <input type="text" class="form-control" placeholder="URL da Imagem" name="imagem">
                             </div>
                         </form>
                     </div>
@@ -114,6 +119,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <button type="submit" class="btn btn-secondary btn-lg">Salvar Personagem</button>
             </div>
         </div>
+
+        <select name="col_name" id="col_name">
+            <option value="01" id="1">First fdhfdg</option>
+            <option value="middle_name" id="2">Middle Sete</option>
+            <option value="second_name" id="3">Second Nine</option>
+        </select>
+
+        // init
+        <script>
+            $('#textbox').val($('#col_name option:selected').val());
+            //on selecting
+            $('#col_name').on('change', function() {
+                $('#textbox').val($(this).find('option:selected').val());
+            })
+        </script>
+        <input type="text" name="col_title" id="textbox" />
 
         <div class="row">
             <div class="col-sm-12" id="footer">

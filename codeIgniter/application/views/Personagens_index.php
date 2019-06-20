@@ -84,62 +84,30 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 <h1>Inimigos</h1>
                 <ul class="characters">
-                    <li>
-                        <div>Cavaleiro Tempestuoso</div>
-                        <div class="art">
-                            <img src="<?php echo ("https://i.pinimg.com/564x/f2/49/3c/f2493ca1297ecfdf61d16007fde0c2b1.jpg"); ?>" alt="cavaleiro_tempestuoso" class="image">
-                            <div class="overlay enemy">
-                                <div class="text">
-                                    Valoroso campeão do rei, perdera todo o prestigio que conquistou
-                                    durante anos em batalhas espetaculares quando fora convocado para liderar a força
-                                    espedicionaria vermelha que lutou contra os cavaleiros dos Sinos em uma destas campanhas
-                                    tudo mudou quando deparou-se com uma jóia descrita pelos seus portadores como
-                                    uma dádiva vinda do céu.
+                    <?php foreach ($inimigos as $inimigo) : ?>
+                        <li>
+                            <div><?php echo $inimigo->nome ?></div>
+                            <div class="art">
+                                <img src="<?php echo $inimigo->imagem; ?> " class="image">
+                                <div class="overlay">
+                                    <div class="text"><?php echo $inimigo->descricao ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
+                            <br>
+                            <a href="<?php echo base_url(); ?>">Editar</a>
+
+                            <br>
+                            <a href="<?php echo base_url(); ?>">Excluir</a>
+                            <br>
+                        </li>
+                    <?php endforeach ?>
                     <li>
-                        <div>Mestre das Trancas</div>
-                        <div class="art">
-                            <img src="<?php echo ("https://cdna.artstation.com/p/assets/images/images/005/038/284/large/ankou-schnee-14361278-1179445815411645-2485188510628170237-o.jpg?1488048710"); ?>" alt="mestre_das_trancas" class="image">
-                            <div class="overlay enemy">
-                                <div class="text">
-                                    Além de construirem as inumeras estátuas de Teville a chama do céu, também construiram
-                                    as trancas mais seguras de toda a Dônia. Seus segredos acompanhavam-os até o tpumulo
-                                    após completarem um último trabalho a Horian, o Fantasma guarda o maior segredo do
-                                    rei.
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>Bruxa das Raízes</div>
-                        <div class="art">
-                            <img src="<?php echo ("https://3.bp.blogspot.com/-f0aR0JG-lNE/XAP0z8VFQUI/AAAAAAABpbU/AinoGEzFibEFXd8dc7azquVdXxEtA1e2ACLcBGAs/s1600/andrei-riabovitchev-witch-full-body-v002.jpg"); ?>" alt="bruxa_das_raizes" class="image">
-                            <div class="overlay enemy">
-                                <div class="text">
-                                    A antiga reinha Vermelha, a qual lhe foi conferida a culpa da traição com os grandes antigos, sucumbiu
-                                    a lâmina de seu amado. A mulher recusou-se a descansar e seu lamento trouxe de volta uma antiga lenda
-                                    a qual a Azaléia e suas raízes absorveram toda a enregia de um determinado local.
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>Gale</div>
-                        <div class="art">
-                            <img src="<?php echo ("https://i.pinimg.com/originals/72/d7/03/72d7039f9d528aadd3fd6c8f68893ead.jpg"); ?>" alt="gale" class="image">
-                            <div class="overlay enemy">
-                                <div class="text">
-                                    O antigo guerreiro quebra armaduras, valoroso combatente do exercito vermelho possui um passado nebuloso,
-                                    antigo companheiro de cavaleiro tempestuoso teve contato com um artefato de muito valor creditado a eles pelos
-                                    adoradores de Previan, a origem dos artefatos é incerta.
-                                </div>
-                            </div>
-                        </div>
+
                     </li>
                 </ul>
+
+                <a href="<?php echo base_url(); ?>">Adicionar</a><br><br>
 
                 <h1>Jogadores</h1>
                 <?php if ($this->session->userdata('usuario_logado')) : ?>

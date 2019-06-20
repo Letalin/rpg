@@ -9,19 +9,21 @@ class Jogadores extends CI_Controller
         parent::__construct();
 
 
-        /*
-        $this->load->model('Personagens_model');
-        */
+        $this->load->model('Jogadores_model');
+        $this->load->model('Armas_model');
+        $this->load->model('Classes_model');
+        
     }
 
     public function index()
     {
 
 
-        /*
-        $data['jogadores'] = $this->"Personagens_model"->selecionar_todos();
         
-*/
+       // $data['jogadores'] = $this->Jogadores_model->selecionar_todos();
+        
+        $data['armas'] = $this->Armas_model->selecionar_todos();
+        $data['classes'] = $this->Classes_model->selecionar_todos();
 
         $this->load->view('bootstrap');
         $this->load->view('cabecalho/inicio');
@@ -39,22 +41,25 @@ class Jogadores extends CI_Controller
 
 
 
-        /*
+        
         if($_POST) {
-			$this->"Personagens_model"->inserir($_POST);
+			$this->Jogadores_model->inserir($_POST);
+        }else{
+            redirect('Personagens');
         }
 
-        Carregar view inicial ou sla!
-        */ }
+        
+        
+    }
 
     public function atualizar($id)
     {
 
         /*
         if($_POST) {
-			$this->"Personagens_model"->alterar($id,$_POST);
+			$this->"Jogadores_model"->alterar($id,$_POST);
         }
-        $data['jogadores'] = $this->"Personagens_model"->selecionar($id);
+        $data['jogadores'] = $this->"Jogadores_model"->selecionar($id);
         
         
         Carregar alguma view mostrando que alterou!
@@ -64,13 +69,15 @@ class Jogadores extends CI_Controller
     {
 
         /*
-        $this->"Personagens_model"->remover($id);
-        $data['jogadores'] = $this->"Personagens_model"->selecionar_todos();
+        $this->"Jogadores_model"->remover($id);
+        $data['jogadores'] = $this->"Jogadores_model"->selecionar_todos();
 
         $this->index();
 
         ou
 
         Carregar alguma view
-        */ }
+        */ 
+        redirect('Personagens');
+    }
 }
