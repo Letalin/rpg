@@ -93,7 +93,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <div><?php echo $inimigo->nome ?></div>
                             <div class="art">
                                 <img src="<?php echo $inimigo->imagem; ?> " class="image">
-                                <div class="overlay">
+                                <div class="overlay enemy">
                                     <div class="text"><?php echo $inimigo->descricao ?>
                                     </div>
                                 </div>
