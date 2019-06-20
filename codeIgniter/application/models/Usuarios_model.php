@@ -50,4 +50,12 @@ class Usuarios_model extends CI_Model
         $query = $this->db->get_where('usuario', array('id' => $id));
         return $query->row();
     }
+
+    public function logarUsuario($email, $senha)
+    {
+        $this->db->where('email', $email);
+        $this->db->where('senha', $senha);
+        $resultado = $this->db->get('usuario')->row_array();
+        return $resultado;
+    }
 }

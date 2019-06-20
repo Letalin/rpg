@@ -17,24 +17,36 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
-            <div class="dropdown">
-                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Login
-                </button>
-                <form class="dropdown-menu p-3 ">
-                    <div class="form-group">
-                        <label>Endereço de email</label>
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label>Senha</label>
-                        <input type="password" class="form-control" placeholder="Senha">
-                    </div>
-                    <button type="submit" class="btn btn-secondary">Entrar</button>
-                    <div class="dropdown-divider"></div>
-                    <small>Não tem conta? <a href="Cadastro">Cadastre-se</a></small>
-                </form>
-            </div>
+            <?php if ($this->session->userdata('usuario_logado')) : ?>
+
+                <li class="nav-item">
+                    <a class="nav-link"> <?php echo $this->session->userdata('nome_usuario'); ?></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url('Login/deslogar'); ?>">Deslogar</a></<a>
+                </li>
+
+            <?php else : ?>
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </button>
+                    <form class="dropdown-menu p-3 " action="<?php echo base_url("Login/autenticar"); ?>" method="post">
+                        <div class="form-group">
+                            <label>Endereço de email</label>
+                            <input type="email" class="form-control" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label>Senha</label>
+                            <input type="password" class="form-control" placeholder="Senha" name="senha">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Entrar</button>
+                        <div class="dropdown-divider"></div>
+                        <small>Não tem conta? <a href="Cadastro">Cadastre-se</a></small>
+                    </form>
+                </div>
+
+            <?php endif ?>
         </ul>
     </nav>
 
@@ -42,7 +54,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="row">
             <div class="col-sm-12 conteudo">
                 <h1>Território de Dônia</h1>
-                <img id="map"src="<?php echo base_url("images/mapa.jpeg");?>" alt="Mapa do território de Dônia" class="img-fluid">
+                <img id="map" src="<?php echo base_url("images/mapa.jpeg"); ?>" alt="Mapa do território de Dônia" class="img-fluid">
 
                 <div id="myModal" class="modal">
                     <span class="close-map">×</span>

@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 
 <body>
@@ -16,25 +16,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li class="nav-item">
                 <a class="nav-link" href="../html/mapa.html">Mapa</a>
             </li>
-            <div class="dropdown">
-                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Login
-                </button>
-                <form class="dropdown-menu p-3 ">
-                    <div class="form-group">
-                        <label>Endereço de email</label>
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label>Senha</label>
-                        <input type="password" class="form-control" placeholder="Senha">
-                    </div>
-                    <button type="submit" class="btn btn-secondary">Entrar</button>
-                    <div class="dropdown-divider"></div>
-                    <small>Não tem conta? <a href="../html/cadastro.html">Cadastre-se</a></small>
-                </form>
-            </div>
+            <?php if ($this->session->userdata('usuario_logado')) : ?>
+
+                <li class="nav-item">
+                    <a class="nav-link"> <?php echo $this->session->userdata('nome_usuario'); ?></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url('Login/deslogar'); ?>">Deslogar</a></<a>
+                </li>
+
+            <?php else : ?>
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </button>
+                    <form class="dropdown-menu p-3 " action="<?php echo base_url("Login/autenticar"); ?>" method="post">
+                        <div class="form-group">
+                            <label>Endereço de email</label>
+                            <input type="email" class="form-control" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label>Senha</label>
+                            <input type="password" class="form-control" placeholder="Senha" name="senha">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Entrar</button>
+                        <div class="dropdown-divider"></div>
+                        <small>Não tem conta? <a href="Cadastro">Cadastre-se</a></small>
+                    </form>
+                </div>
+
+            <?php endif ?>
         </ul>
     </nav>
 
@@ -119,8 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="social-networks">
                             <li><a class="github" href="https://github.com/felipelalmeida" target="_blank">Github</a>
                             </li>
-                            <li><a class="linkedin" href="https://www.linkedin.com/in/felipe-almeida-5115b4183/"
-                                    target="_blank">LinkedIn</a></li>
+                            <li><a class="linkedin" href="https://www.linkedin.com/in/felipe-almeida-5115b4183/" target="_blank">LinkedIn</a></li>
                         </ul>
                     </div>
                     <div class="col">
@@ -132,8 +142,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </ul>
                         <ul class="social-networks">
                             <li><a class="github" href="https://github.com/Hay00" target="_blank">Github</a></li>
-                            <li><a class="linkedin" href="https://www.linkedin.com/in/vinicios-dutra-schulze-2701a8145/"
-                                    target="_blank">LinkedIn</a>
+                            <li><a class="linkedin" href="https://www.linkedin.com/in/vinicios-dutra-schulze-2701a8145/" target="_blank">LinkedIn</a>
                             </li>
                         </ul>
                     </div>
@@ -144,8 +153,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li>História:</li>
                             <li>Pedro H. Almeida</li>
                             <li>Contato:</li>
-                            <li><a href="mailto:contato@engenheiropedrodealmeida.com.br"
-                                    class="mail">contato@engenheiropedrodealmeida.com.br</a>
+                            <li><a href="mailto:contato@engenheiropedrodealmeida.com.br" class="mail">contato@engenheiropedrodealmeida.com.br</a>
                             </li>
                         </ul>
                     </div>

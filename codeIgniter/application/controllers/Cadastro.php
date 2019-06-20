@@ -51,7 +51,7 @@ class Cadastro extends CI_Controller
         $this->load->view('bootstrap');
         $this->load->view('cabecalho/inicio');
         $this->load->view('cabecalho/cadastro');
-        $this->load->view('Cadastro_index');
+        $this->load->view('Usuario_cadastrar');
     }
 
     public function atualizar($id)
