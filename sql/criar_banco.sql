@@ -24,6 +24,7 @@ CREATE TABLE classe (
     forca INT NOT NULL,
     destreza INT NOT NULL,
     agilidade INT NOT NULL,
+    nome varchar(15),
     PRIMARY KEY (id_classe)
 );
 
