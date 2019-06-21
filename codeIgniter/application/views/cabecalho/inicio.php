@@ -13,7 +13,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             background-image: linear-gradient(0, #ABA77D, #F3EEB4);
             font-family: 'Mate SC', serif;
         }
-
+         
         #title {
             font-size: 200%;
         }
