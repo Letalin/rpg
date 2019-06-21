@@ -29,7 +29,7 @@ class Cadastro extends CI_Controller
         $this->load->view('cabecalho/inicio');
         $this->load->view('cabecalho/cadastro');
         
-        $this->load->view('Usuario_cadastrar');
+        redirect('inicio');
     }
 
     public function atualizar($id)
