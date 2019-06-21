@@ -6,13 +6,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <head>
     <style type="text/css">
-        #map {
+        /* #map {
             cursor: pointer;
-            /* border-radius: 5px;
-            transition: 0.6s;
-            margin-left: auto;
-            width: 512px;
-            height: 384px; */
         }
 
         #map:hover {
@@ -31,6 +26,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             overflow: auto;
             background-color: rgb(0, 0, 0);
             background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
         }
 
         .modal-content-map {
@@ -98,7 +94,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             .modal-content {
                 width: 100%;
             }
-        }
+        } */
     </style>
 
 </head>

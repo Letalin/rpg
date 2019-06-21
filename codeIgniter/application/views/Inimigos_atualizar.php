@@ -49,19 +49,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </ul>
     </nav>
 
+
     <div class="row">
         <div class="conteudo col">
             <h1>Editar Inimigo</h1>
             <div class="row">
                 <div class="col-sm-4 offset-sm-4">
-                    <form method="POST" action="<?php echo base_url("Inimigos/atualizar/".$inimigo->id_inimigo); ?>">
+                    <form method="POST" action="<?php echo base_url("Inimigos/atualizar/" . $inimigo->id_inimigo); ?>">
                         <div class="form-group">
                             <label>Nome do Inimigo</label>
-                            <input type="text" class="form-control" placeholder="Nomeie seu Inimigos" name="nome" value="<?php echo $inimigo->nome ?>">
+                            <input type="text" class="form-control" placeholder="Nome" name="nome" value="<?php echo $inimigo->nome ?>">
                         </div>
                         <div class="form-group">
                             <label>Origem</label>
-                            <textarea class="form-control" rows="8" maxlength="150" name="descricao"><?php echo $inimigo->descricao ?></textarea>
+                            <textarea class="form-control" rows="8" maxlength="150" name="descricao" placeholder="Origem / Descrição"><?php echo $inimigo->descricao ?></textarea>
                         </div>
                         <div class="form-group">
                             <label>Imagem</label>
@@ -74,6 +75,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
         </div>
     </div>
+
 
     <div class="row">
         <div class="col-sm-12" id="footer">

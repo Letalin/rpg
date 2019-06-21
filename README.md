@@ -1,11 +1,12 @@
 # RPG Website
 Site feito para trabalho de Programação Web.
 
-Foi realizado com:
+Utilizado para o deenvolvimento:
 * HTML
 * CSS
 * PHP
 * Java Script
 * Bootsrtap
 * CodeIgniter
+* XAMP
 

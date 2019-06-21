@@ -56,7 +56,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="col-sm-4 offset-sm-4">
                     <form method="POST" action="<?php echo base_url("Inimigos/cadastrar"); ?>">
                         <div class="form-group">
-                            <label>Nome do Personagem</label>
+                            <label>Nome do Inimigo</label>
                             <input type="text" class="form-control" placeholder="Nomeie seu Inimigo" name="nome">
                         </div>
                         <div class="form-group">

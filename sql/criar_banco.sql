@@ -1,6 +1,6 @@
-drop database if exists memorias_do_caos_antigo;
-create database memorias_do_caos_antigo;
-use memorias_do_caos_antigo;
+DROP DATABASE IF EXISTS memorias_do_caos_antigo;
+CREATE DATABASE memorias_do_caos_antigo;
+USE memorias_do_caos_antigo;
 
 CREATE TABLE usuario (
     id_usuario INT NOT NULL AUTO_INCREMENT,

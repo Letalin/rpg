@@ -57,7 +57,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <form method="post" action="<?php echo base_url("Armas/cadastrar"); ?>">
                         <div class="form-group">
                             <label>Nome da Arma</label>
-                            <input type="text" class="form-control" placeholder="Nomeie sua espada" name="nome">
+                            <input type="text" class="form-control" placeholder="Nome" name="nome">
                         </div>
                         <div class="form-group">
                             <label>Dano Perfurante</label>

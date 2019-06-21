@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- Página inicial... -->
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
         <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Memórias do Caos Antigo</a>
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -19,13 +19,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
             <?php if ($this->session->userdata('usuario_logado')) : ?>
 
-                <li class="nav-item">
-                    <a class="nav-link"> <?php echo $this->session->userdata('nome_usuario'); ?></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url('Login/deslogar'); ?>">Deslogar</a></<a>
-                </li>
+                <form class="form-inline my-2 my-lg-0">
 
+                    <a class="nav-link"> <?php echo $this->session->userdata('nome_usuario'); ?></a>
+                    <a class="nav-link" href="<?php echo site_url('Login/deslogar'); ?>">Deslogar</a></<a>
+
+                </form>
             <?php else : ?>
                 <div class="dropdown">
                     <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,11 +40,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <input type="password" class="form-control" placeholder="Senha" name="senha">
                         </div>
                         <button type="submit" class="btn btn-secondary">Entrar</button>
+
                         <div class="dropdown-divider"></div>
                         <small>Não tem conta? <a href="Cadastro">Cadastre-se</a></small>
                     </form>
                 </div>
-
             <?php endif ?>
         </ul>
     </nav>
@@ -68,57 +67,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     ao limite para lutar contra outros homens que tentavam defender suas terras e sua honra.</p>
 
                 <p>Os quatro homens nasceram em regiões diferentes de um mesmo território governado por duas
-                    famílias reais unidas três gerações atrás, a família das Azaléias e a família dos Vermelhos,
-                    no momento do conflito o governante era prestigioso L.E.S. Horian, considerado por muitos
-                    o
-                    governante
-                    perfeito,
-                    carismático e imponente sempre foi entusiasta nas ciências naturais e da alma, o que explica em
-                    parte
-                    seu interesse
-                    no recém descoberto Enco extraído no país mais ao norte, entretanto o governante carregava uma
-                    grande
-                    vergonha,
-                    diferentemente de seus antepassados, Horian não conseguia ter filhos, fazendo-o optar por práticas
-                    menos
-                    ortodoxas
-                    de conceber um herdeiro para seu reino, dessa maneira, aceitando um culto até então considerado
-                    obscuro
-                    pela sua natureza
-                    ligada ao minério, fomentou então a dispersão da religião por todo o território até o dia em que sua
-                    mulher,
-                    Lusenhuf deu a luz
-                    ao pequeno Ethel, em um primeiro momento Lusenhuf tentou argumentar que Ethel precisava descansar
-                    pois havia chorado
-                    demais e havia sido um parto difícil, mesmo assim Horian adentrou os aposentos de sua amada esposa e
-                    quando viu o rosto
-                    de seu recém nascido e tão esperado filho sua fisionomia mudou e nunca mais fora a mesma, segundo
-                    ele ,
-                    seu filho não
-                    havia sido concebido por ele e Lusenhuf, mas sim por ele e Alva. </p>
+                    famílias reais unidas três gerações atrás, a família das Azaléias e a família dos Vermelhos, no momento do conflito o governante
+                    era prestigioso L.E.S. Horian, considerado por muitos o governante perfeito, carismático e imponente, sempre foi entusiasta
+                    nas ciências naturais e da alma, o que explica em parte seu interesse no recém descoberto Enco extraído no país mais ao norte,
+                    entretanto o governante carregava uma grande vergonha, diferentemente de seus antepassados, Horian não conseguia ter filhos,
+                    fazendo-o optar por práticas menos ortodoxas de conceber um herdeiro para seu reino, dessa maneira, aceitando um culto até então considerado
+                    obscuro pela sua natureza ligada ao minério, fomentou então a dispersão da religião por todo o território até o dia em que sua
+                    mulher, Lusenhuf deu a luz ao pequeno Ethel, em um primeiro momento Lusenhuf tentou argumentar que Ethel precisava descansar
+                    pois havia chorado demais e havia sido um parto difícil, mesmo assim Horian adentrou os aposentos de sua amada esposa e
+                    quando viu o rosto de seu recém nascido e tão esperado filho sua fisionomia mudou e nunca mais fora a mesma, segundo
+                    ele , seu filho não havia sido concebido por ele e Lusenhuf, mas sim por ele e Alva. </p>
 
                 <p>Alva ou Máscara Alva, era o nome pelo qual a Deusa do minério era conhecida, após dizer tais palavras
                     Horian atacou seu orientador espiritual e ordenou que fosse criado um decreto banindo da região
-                    todos os sacerdotes
-                    de todo o
-                    território que governava, dando ordem para seu exército massacrar tanto sacerdotes como praticantes
-                    do culto, pois segundo ele
-                    a religião ameaçava a soberania das Azaléias vermelhas.</p>
+                    todos os sacerdotes de todo o território que governava, dando ordem para seu exército massacrar
+                    tanto sacerdotes como praticantes do culto, pois segundo ele a religião ameaçava a soberania
+                    das Azaléias vermelhas.</p>
 
                 <p>Após assinar tal decreto, que revoltou parte de seu exército, Horian ordenou que Lusenhuf aceitasse
-                    que
-                    Ethel não era filho
-                    deles e que a criança devia ser morta o quanto antes, pois ela representava uma enorme ameaça,
-                    Lusenhuf
-                    obviamente não
-                    aceitou a decisão de seu marido e viu seu filho ser tomado de seu colo pelas mãos de um soldado, nem
-                    Ethel nem o soldado
-                    foram vistos novamente, tanto pelos olhos de Horian quanto de os Lusenhuf que logo se fecharam para
-                    nunca mais voltarem
-                    a abrir após ela tirar a própria vida. </p>
+                    que Ethel não era filho deles e que a criança devia ser morta o quanto antes, pois ela representava uma
+                    enorme ameaça, Lusenhuf obviamente não aceitou a decisão de seu marido e viu seu filho ser tomado de seu colo
+                    pelas mãos de um soldado, nem Ethel nem o soldado foram vistos novamente, tanto pelos olhos de Horian quanto
+                    de os Lusenhuf que logo se fecharam para nunca mais voltarem a abrir após ela tirar a própria vida. </p>
             </div>
         </div>
-
+        <br>
         <div class="row">
             <div class="col-sm-12" id="footer">
                 <ul>

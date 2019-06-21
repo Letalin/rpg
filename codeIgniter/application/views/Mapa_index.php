@@ -4,7 +4,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body>
 
-
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Memórias do Caos Antigo</a>
         <ul class="navbar-nav">
@@ -56,14 +55,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <h1>Território de Dônia</h1>
                 <img id="map" src="<?php echo base_url("images/mapa.jpeg"); ?>" alt="Mapa do território de Dônia" class="img-fluid">
 
-                <div id="myModal" class="modal">
+                <!-- <div id="myModal" class="modal">
                     <span class="close-map">×</span>
                     <img class="modal-content-map" id="img01">
                     <div id="caption"></div>
-                </div>
+                </div> -->
+                
             </div>
         </div>
-
+        <br><br>
         <div class="row">
             <div class="col-sm-12" id="footer">
                 <ul>

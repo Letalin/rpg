@@ -4,8 +4,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body>
 
-
-
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Memórias do Caos Antigo</a>
         <ul class="navbar-nav">
@@ -51,6 +49,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </ul>
     </nav>
 
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 conteudo">
@@ -78,13 +77,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </li>
                     <?php endforeach ?>
                     <li>
-
                     </li>
                 </ul>
+
 
                 <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel') == '0')) : ?>
                     <a href="<?php echo base_url('Personagens/cadastrar'); ?>"><i class="fas fa-plus-circle"></i>Adicionar</a><br><br>
                 <?php endif ?>
+
 
                 <h1>Inimigos</h1>
                 <ul class="characters">
@@ -109,9 +109,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <?php endif ?>
                     <?php endforeach ?>
                     <li>
-
                     </li>
                 </ul>
+
                 <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel') == '0')) : ?>
                     <a href="<?php echo base_url('Inimigos/cadastrar'); ?>"><i class="fas fa-plus-circle"></i>Adicionar</a><br><br>
                 <?php endif ?>
@@ -125,13 +125,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <div><?php echo $jogador->nome ?></div>
                             <div class="art">
                                 <img src="<?php echo $jogador->imagem; ?> " class="image">
-                                <div class="overlay enemy">
+                                <div class="overlay">
                                     <div class="text"><?php echo $jogador->origem ?>
                                     </div>
                                 </div>
+                                <?php echo $jogador->classe?>
                             </div>
                             <br>
-                            <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('id_usuario') == $jogador->usuario)) : ?>
+                            <?php if (($this->session->userdata('usuario_logado') && ($this->session->userdata('id_usuario') == $jogador->usuario)) || ($this->session->userdata('nivel') == '0')) : ?>
                                 <a class="edit" href="<?php echo base_url('Jogadores/atualizar/' . $jogador->id_jogador); ?>"><i class="fas fa-edit"></i>Editar</a>
 
                                 <br>
@@ -151,6 +152,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
         </div>
 
+        
         <div class="row">
             <div class="col-sm-12" id="footer">
                 <ul>

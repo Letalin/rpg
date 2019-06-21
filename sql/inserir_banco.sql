@@ -1,22 +1,12 @@
 -- insere o usuario administrador no banco
-insert into usuario (email,senha,nome,nivel_acesso)
-	values ('admin@admin.com', 'administrador','Administrador','0');
+INSERT INTO `memorias_do_caos_antigo`.`usuario` (`email`, `senha`,`nome`,`nivel_acesso`) VALUES ('admin@admin.com', 'administrador','Administrador','0');
 
 -- insere as classes
-insert into classe (vida, energia, forca, destreza, agilidade, nome)
-	values ('11','12','13','13','5','Guerreiro');
-
-insert into classe (vida, energia, forca, destreza, agilidade, nome)
-	values ('9','9','9','15','15','Ladino');
-    
-insert into classe (vida, energia, forca, destreza, agilidade, nome)
-	values ('8','8','9','11','10','Mago');
-    
-insert into classe (vida, energia, forca, destreza, agilidade, nome)
-	values ('14','10','11','11','6','Paladino');
-    
-insert into classe (vida, energia, forca, destreza, agilidade, nome)
-	values ('9','11','9','14','13','Arqueiro');
+INSERT INTO `memorias_do_caos_antigo`.`classe`(`vida`, `energia`, `forca`, `destreza`, `agilidade`,`nome`) VALUES ('11','12','13','13','5','Guerreiro');
+INSERT INTO `memorias_do_caos_antigo`.`classe`(`vida`, `energia`, `forca`, `destreza`, `agilidade`,`nome`) VALUES ('9','9','9','15','15','Ladino');
+INSERT INTO `memorias_do_caos_antigo`.`classe`(`vida`, `energia`, `forca`, `destreza`, `agilidade`,`nome`) VALUES ('8','8','9','11','10','Mago');
+INSERT INTO `memorias_do_caos_antigo`.`classe`(`vida`, `energia`, `forca`, `destreza`, `agilidade`,`nome`) VALUES ('14','10','11','11','6','Paladino');
+INSERT INTO `memorias_do_caos_antigo`.`classe`(`vida`, `energia`, `forca`, `destreza`, `agilidade`,`nome`) VALUES ('9','11','9','14','13','Arqueiro');
 
 -- insere as armas
 INSERT INTO `memorias_do_caos_antigo`.`arma` ( `nome`, `dano_corte`, `dano_perfuracao`, `dano_esmagador`,`imagem`) VALUES ('Adaga', '35', '100', '0','images/dagger.png');
@@ -28,9 +18,9 @@ INSERT INTO `memorias_do_caos_antigo`.`arma` ( `nome`, `dano_corte`, `dano_perfu
 INSERT INTO `memorias_do_caos_antigo`.`arma` ( `nome`, `dano_corte`, `dano_perfuracao`, `dano_esmagador`,`imagem`) VALUES ('Espada do Julgamento', '40', '30', '80','images/ultra-greatsword.png');
 
 -- insere os inimigos
-INSERT INTO `memorias_do_caos_antigo`.`inimigo` (`nome`, `descricao`, `imagem`,`usuario`) VALUES ('Cavaleiro Tempestuoso', 'Valoroso campeão do rei, perdera todo o prestigio que conquistou durante anos em batalhas espetaculares quando fora convocado para liderar a força espedicionaria vermelha que lutou contra os cavaleiros dos Sinos em uma destas campanhas tudo mudou quando deparou-se com uma jóia descrita pelos seus portadores como uma dádiva vinda do céu.', 'https://i.pinimg.com/564x/f2/49/3c/f2493ca1297ecfdf61d16007fde0c2b1.jpg','1');
-INSERT INTO `memorias_do_caos_antigo`.`inimigo` (`nome`, `descricao`, `imagem`,`usuario`) VALUES ('Mestre das Trancas', 'Além de construirem as inumeras estátuas de Teville a chama do céu, também construiram as trancas mais seguras de toda a Dônia. Seus segredos acompanhavam-os até o tpumulo após completarem um último trabalho a Horian, o Fantasma guarda o maior segredo do rei.', 'https://cdna.artstation.com/p/assets/images/images/005/038/284/large/ankou-schnee-14361278-1179445815411645-2485188510628170237-o.jpg?1488048710','1');
-INSERT INTO `memorias_do_caos_antigo`.`inimigo` (`nome`, `descricao`, `imagem`,`usuario`) VALUES ('Bruxa das Raízes', 'A antiga reinha Vermelha, a qual lhe foi conferida a culpa da traição com os grandes antigos, sucumbiu a lâmina de seu amado. A mulher recusou-se a descansar e seu lamento trouxe de volta uma antiga lenda a qual a Azaléia e suas raízes absorveram toda a enregia de um determinado local.', 'https://3.bp.blogspot.com/-f0aR0JG-lNE/XAP0z8VFQUI/AAAAAAABpbU/AinoGEzFibEFXd8dc7azquVdXxEtA1e2ACLcBGAs/s1600/andrei-riabovitchev-witch-full-body-v002.jpg','1');
+INSERT INTO `memorias_do_caos_antigo`.`inimigo` (`nome`, `descricao`, `imagem`,`usuario`) VALUES ('Cavaleiro Tempestuoso', 'Valoroso campeão do rei, perdera todo o prestigio que conquistou durante anos em batalhas espetaculares quando fora convocado para liderar a força espedicionaria vermelha, onde lutou contra os cavaleiros dos Sinos, uma destas campanhas tudo mudou quando ao deparar-se com uma jóia descrita pelos seus portadores como uma dádiva vinda do céu.', 'https://i.pinimg.com/564x/f2/49/3c/f2493ca1297ecfdf61d16007fde0c2b1.jpg','1');
+INSERT INTO `memorias_do_caos_antigo`.`inimigo` (`nome`, `descricao`, `imagem`,`usuario`) VALUES ('Mestre das Trancas', 'Além de construirem as inumeras estátuas de Teville a chama do céu, também construiram as trancas mais seguras de toda a Dônia. Seus segredos acompanhavam-os até o túumulo após completarem um último trabalho a Horian, o Fantasma guarda o maior segredo do rei.', 'https://cdna.artstation.com/p/assets/images/images/005/038/284/large/ankou-schnee-14361278-1179445815411645-2485188510628170237-o.jpg?1488048710','1');
+INSERT INTO `memorias_do_caos_antigo`.`inimigo` (`nome`, `descricao`, `imagem`,`usuario`) VALUES ('Bruxa das Raízes', 'A antiga reinha Vermelha, a qual lhe foi conferida a culpa da traição com os grandes antigos, sucumbiu a lâmina de seu amado. A mulher recusou-se a descansar e seu lamento trouxe de volta uma antiga lenda a qual a Azaléia e suas raízes absorveram toda a energia de um determinado local.', 'https://3.bp.blogspot.com/-f0aR0JG-lNE/XAP0z8VFQUI/AAAAAAABpbU/AinoGEzFibEFXd8dc7azquVdXxEtA1e2ACLcBGAs/s1600/andrei-riabovitchev-witch-full-body-v002.jpg','1');
 INSERT INTO `memorias_do_caos_antigo`.`inimigo` (`nome`, `descricao`, `imagem`,`usuario`) VALUES ('Gale', 'O antigo guerreiro quebra armaduras, valoroso combatente do exercito vermelho possui um passado nebuloso, antigo companheiro de cavaleiro tempestuoso teve contato com um artefato de muito valor creditado a eles pelos adoradores de Previan, a origem dos artefatos é incerta.', 'https://i.pinimg.com/originals/72/d7/03/72d7039f9d528aadd3fd6c8f68893ead.jpg','1');
 
 -- insere personagens

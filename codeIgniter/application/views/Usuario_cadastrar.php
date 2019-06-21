@@ -45,16 +45,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <form method="POST" action="<?php echo base_url("Cadastro/cadastrar"); ?>">
                         <div class="form-group">
                             <label>Nome</label>
-                            <input type="text" class="form-control" placeholder="Nome Completo" style="text-align: center;" name="nome">
+                            <input type="text" class="form-control" placeholder="Nome Completo" style="text-align: center;" name="nome" required>
                         </div>
                         <div class="form-group">
                             <label>Endereço de Email</label>
-                            <input type="email" class="form-control" placeholder="Email" style="text-align: center;" name="email">
+                            <input type="email" class="form-control" placeholder="Email" style="text-align: center;" name="email" required>
                         </div>
 
                         <div class="form-group">
                             <label>Senha</label>
-                            <input type="password" class="form-control" placeholder="Senha" style="text-align: center;" name="senha">
+                            <input type="password" class="form-control" placeholder="Senha" style="text-align: center;" name="senha" required>
                         </div>
                         <input type="hidden" name="nivel_acesso" value="1">
                         <input type="submit" class="btn btn-secondary  btn-lg">

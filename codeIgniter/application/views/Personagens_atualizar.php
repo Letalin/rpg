@@ -57,11 +57,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <form method="POST" action="<?php echo base_url("Personagens/atualizar/".$personagem->id_personagem); ?>">
                         <div class="form-group">
                             <label>Nome do Personagem</label>
-                            <input type="text" class="form-control" placeholder="Nomeie sua Personagem" name="nome" value="<?php echo $personagem->nome ?>">
+                            <input type="text" class="form-control" placeholder="Nome" name="nome" value="<?php echo $personagem->nome ?>">
                         </div>
                         <div class="form-group">
                             <label>Origem</label>
-                            <textarea class="form-control" rows="8" maxlength="150" name="descricao"><?php echo $personagem->descricao ?></textarea>
+                            <textarea class="form-control" rows="8" maxlength="150" name="descricao" placeholder="Origem / Descrição"><?php echo $personagem->descricao ?></textarea>
                         </div>
                         <div class="form-group">
                             <label>Imagem</label>
