@@ -55,10 +55,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <h1>Cadastro de Personagem</h1>
                 <div class="row">
                     <div class="col-sm-4 offset-sm-4">
-                        <form method="POST" action="<?php echo base_url("Jogadores/atualizar/".$jogador->id_jogador); ?>">
+                        <form method="POST" action="<?php echo base_url("Jogadores/atualizar/" . $jogador->id_jogador); ?>">
                             <div class="form-group">
                                 <label>Nome do personagem</label>
-                                <input type="text" class="form-control" placeholder="Nick Name" name="nome"  value="<?php echo $jogador->nome ?>">
+                                <input type="text" class="form-control" placeholder="Nick Name" name="nome" value="<?php echo $jogador->nome ?>">
                             </div>
                             <div class="form-group">
                                 <label>Classe</label>
@@ -66,12 +66,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                     <?php foreach ($classes as $classe) : ?>
                                         <option value="<?php echo $classe->id_classe; ?>"><?php echo $classe->nome; ?></option>
                                     <?php endforeach ?>
-                                    <!--                                     
-                                    <option id="qq">Guerreiro</option>
-                                    <option id="ww">Ladino</option>
-                                    <option id="eeW">Mago</option>
-                                    <option id="">Paladino</option>
-                                    <option id="">Arqueiro</option> -->
                                 </select>
                             </div>
 

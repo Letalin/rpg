@@ -129,7 +129,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                     <div class="text"><?php echo $jogador->origem ?>
                                     </div>
                                 </div>
-                                <?php echo $jogador->classe?>
+                                <br>
+                                <b> Classe: 
+                                <?php foreach ($classes as $classe) 
+                                { 
+                                    if ($jogador->classe === $classe->id_classe)
+                                    {
+                                        echo $classe->nome;
+                                    }
+                                }
+                                ?>
+                                </b>
                             </div>
                             <br>
                             <?php if (($this->session->userdata('usuario_logado') && ($this->session->userdata('id_usuario') == $jogador->usuario)) || ($this->session->userdata('nivel') == '0')) : ?>
@@ -152,7 +162,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
         </div>
 
-        
+
         <div class="row">
             <div class="col-sm-12" id="footer">
                 <ul>

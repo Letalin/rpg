@@ -66,16 +66,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                     <?php foreach ($classes as $classe) : ?>
                                         <option value="<?php echo $classe->id_classe; ?>"><?php echo $classe->nome; ?></option>
                                     <?php endforeach ?>
-                                    <!--                                     
-                                    <option id="qq">Guerreiro</option>
-                                    <option id="ww">Ladino</option>
-                                    <option id="eeW">Mago</option>
-                                    <option id="">Paladino</option>
-                                    <option id="">Arqueiro</option> -->
                                 </select>
                             </div>
 
-                            <input type="hidden" name="classe" id="classe"  value="1">
+                            <input type="hidden" name="classe" id="classe" value="1">
                             <!-- Script para passar o id da classe -->
                             <script>
                                 (function() {

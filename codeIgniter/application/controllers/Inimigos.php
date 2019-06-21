@@ -5,27 +5,18 @@ class Inimigos extends CI_Controller
 {
     public function __construct()
     {
-        //Chama modelo para carregar dados
         parent::__construct();
-
         $this->load->model('Inimigos_model');
     }
 
     public function index()
     {
-
-
-
         $data['inimigos'] = $this->Inimigos_model->selecionar_todos();
 
-
-        /* Passa os dados para a view
-        //$this->load->view('O nome da tua view index ou sla', $data);
-        */
-        //Chama a view pra carregar html
         $this->load->view('bootstrap');
         $this->load->view('cabecalho/inicio');
         $this->load->view('cabecalho/personagens');
+
         $this->load->view('Personagens_index', $data);
     }
 
@@ -38,6 +29,7 @@ class Inimigos extends CI_Controller
             $this->load->view('bootstrap');
             $this->load->view('cabecalho/inicio');
             $this->load->view('cabecalho/personagens');
+
             $this->load->view('Inimigos_cadastrar');
         }
     }
@@ -53,6 +45,7 @@ class Inimigos extends CI_Controller
             $this->load->view('bootstrap');
             $this->load->view('cabecalho/inicio');
             $this->load->view('cabecalho/personagens');
+
             $this->load->view('Inimigos_atualizar', $data);
         }
     }

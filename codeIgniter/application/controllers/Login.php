@@ -6,7 +6,6 @@ class Login extends CI_Controller
 
     public function __construct()
     {
-        //Chama modelo para carregar dados
         parent::__construct();
         $this->load->model('Usuarios_model');
     }

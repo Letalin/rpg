@@ -17,8 +17,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
-
-
             <?php if ($this->session->userdata('usuario_logado')) : ?>
 
                 <li class="nav-item">

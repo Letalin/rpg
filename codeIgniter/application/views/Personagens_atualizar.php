@@ -54,7 +54,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <h1>Editar Personagem</h1>
             <div class="row">
                 <div class="col-sm-4 offset-sm-4">
-                    <form method="POST" action="<?php echo base_url("Personagens/atualizar/".$personagem->id_personagem); ?>">
+                    <form method="POST" action="<?php echo base_url("Personagens/atualizar/" . $personagem->id_personagem); ?>">
                         <div class="form-group">
                             <label>Nome do Personagem</label>
                             <input type="text" class="form-control" placeholder="Nome" name="nome" value="<?php echo $personagem->nome ?>">

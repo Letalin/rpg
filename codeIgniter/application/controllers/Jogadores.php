@@ -5,10 +5,7 @@ class Jogadores extends CI_Controller
 {
     public function __construct()
     {
-        //Chama modelo para carregar dados
         parent::__construct();
-
-
         $this->load->model('Jogadores_model');
         $this->load->model('Armas_model');
         $this->load->model('Classes_model');
@@ -16,23 +13,14 @@ class Jogadores extends CI_Controller
 
     public function index()
     {
-
-
-
-        // $data['jogadores'] = $this->Jogadores_model->selecionar_todos();
-
         $data['armas'] = $this->Armas_model->selecionar_todos();
         $data['classes'] = $this->Classes_model->selecionar_todos();
 
         $this->load->view('bootstrap');
         $this->load->view('cabecalho/inicio');
         $this->load->view('cabecalho/cadastro');
+        
         $this->load->view('Jogador_cadastrar', $data);
-        /* Passa os dados para a view
-        //$this->load->view('O nome da tua view index ou sla', $data);
-        */
-        //Chama a view pra carregar html
-
     }
 
     public function cadastrar()
@@ -46,14 +34,13 @@ class Jogadores extends CI_Controller
             $this->load->view('bootstrap');
             $this->load->view('cabecalho/inicio');
             $this->load->view('cabecalho/cadastro');
+
             $this->load->view('Jogador_cadastrar', $data);
         }
     }
 
     public function atualizar($id)
     {
-
-
         if ($_POST) {
             $this->Jogadores_model->alterar($id, $_POST);
             $data['jogadores'] = $this->Jogadores_model->selecionar;
@@ -65,6 +52,7 @@ class Jogadores extends CI_Controller
             $this->load->view('bootstrap');
             $this->load->view('cabecalho/inicio');
             $this->load->view('cabecalho/cadastro');
+
             $this->load->view('Jogador_atualizar', $data);
         }
     }

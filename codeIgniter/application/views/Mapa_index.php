@@ -54,13 +54,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="col-sm-12 conteudo">
                 <h1>Território de Dônia</h1>
                 <img id="map" src="<?php echo base_url("images/mapa.jpeg"); ?>" alt="Mapa do território de Dônia" class="img-fluid">
-
-                <!-- <div id="myModal" class="modal">
-                    <span class="close-map">×</span>
-                    <img class="modal-content-map" id="img01">
-                    <div id="caption"></div>
-                </div> -->
-                
             </div>
         </div>
         <br><br>

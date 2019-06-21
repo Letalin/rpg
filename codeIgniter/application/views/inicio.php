@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- Página inicial... -->
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <a class="navbar-brand" href="<?php echo base_url("inicio"); ?>" id="title">Memórias do Caos Antigo</a>
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -16,15 +16,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url("Mapa"); ?>">Mapa</a>
             </li>
-
             <?php if ($this->session->userdata('usuario_logado')) : ?>
 
-                <form class="form-inline my-2 my-lg-0">
-
+                <li class="nav-item">
                     <a class="nav-link"> <?php echo $this->session->userdata('nome_usuario'); ?></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo site_url('Login/deslogar'); ?>">Deslogar</a></<a>
+                </li>
 
-                </form>
             <?php else : ?>
                 <div class="dropdown">
                     <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,11 +40,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <input type="password" class="form-control" placeholder="Senha" name="senha">
                         </div>
                         <button type="submit" class="btn btn-secondary">Entrar</button>
-
                         <div class="dropdown-divider"></div>
                         <small>Não tem conta? <a href="Cadastro">Cadastre-se</a></small>
                     </form>
                 </div>
+
             <?php endif ?>
         </ul>
     </nav>
