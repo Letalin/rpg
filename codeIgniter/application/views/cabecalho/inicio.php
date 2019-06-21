@@ -18,6 +18,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
             font-size: 200%;
         }
 
+        #nome-user{
+            color: white;
+        }
+
+        #deslogar{
+            color:red;
+        }
+
         .conteudo {
             margin-top: 1em;
             font-size: 22px;

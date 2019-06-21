@@ -20,10 +20,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <?php if ($this->session->userdata('usuario_logado')) : ?>
 
                 <li class="nav-item">
-                    <a class="nav-link"> <?php echo $this->session->userdata('nome_usuario'); ?></a>
+                    <a id="nome-user" class="nav-link"> <?php echo $this->session->userdata('nome_usuario'); ?></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url('Login/deslogar'); ?>">Deslogar</a></<a>
+                    <a id="deslogar" class="nav-link" href="<?php echo site_url('Login/deslogar'); ?>">Deslogar</a></<a>
                 </li>
 
             <?php else : ?>

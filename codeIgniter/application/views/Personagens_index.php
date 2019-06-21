@@ -19,10 +19,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <?php if ($this->session->userdata('usuario_logado')) : ?>
 
                 <li class="nav-item">
-                    <a class="nav-link"> <?php echo $this->session->userdata('nome_usuario'); ?></a>
+                    <a id="nome-user" class="nav-link"> <?php echo $this->session->userdata('nome_usuario'); ?></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url('Login/deslogar'); ?>">Deslogar</a></<a>
+                    <a id="deslogar" class="nav-link" href="<?php echo site_url('Login/deslogar'); ?>">Deslogar</a></<a>
                 </li>
 
             <?php else : ?>
@@ -67,17 +67,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </div>
                             </div>
                             <br>
-                            <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel') == '0')) : ?>
-                                <a class="edit" href="<?php echo base_url("Personagens/atualizar/" . $personagem->id_personagem); ?>"><i class="fas fa-edit"></i>Editar</a>
+                            <div>
+                                <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('nivel') == '0')) : ?>
+                                    <a class="edit" href="<?php echo base_url("Personagens/atualizar/" . $personagem->id_personagem); ?>"><i class="fas fa-edit"></i>Editar</a>
 
-                                <br>
-                                <a class="delete" href="<?php echo base_url("Personagens/deletar/" . $personagem->id_personagem); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
-                                <br>
-                            <?php endif ?>
+                                    <br>
+                                    <a class="delete" href="<?php echo base_url("Personagens/deletar/" . $personagem->id_personagem); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
+                                    <br>
+                                <?php endif ?>
+                            </div>
                         </li>
                     <?php endforeach ?>
-                    <li>
-                    </li>
                 </ul>
 
 
@@ -130,15 +130,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <br>
-                                <b> Classe: 
-                                <?php foreach ($classes as $classe) 
-                                { 
-                                    if ($jogador->classe === $classe->id_classe)
-                                    {
-                                        echo $classe->nome;
+                                <b> Classe:
+                                    <?php foreach ($classes as $classe) {
+                                        if ($jogador->classe === $classe->id_classe) {
+                                            echo $classe->nome;
+                                        }
                                     }
-                                }
-                                ?>
+                                    ?>
                                 </b>
                             </div>
                             <br>
