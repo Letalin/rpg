@@ -54,23 +54,56 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="conteudo col">
                 <h1>Cadastro de Personagem</h1>
                 <div class="row">
-                    <div class="col-sm-6">
-                        <form action="">
+                    <div class="col-sm-4 offset-sm-4">
+                        <form method="POST" action="<?php echo base_url("Jogadores/cadastrar"); ?>">
                             <div class="form-group">
                                 <label>Nome do personagem</label>
                                 <input type="text" class="form-control" placeholder="Nick Name" name="nome">
                             </div>
                             <div class="form-group">
                                 <label>Classe</label>
-                                <select class="form-control" name="classes" id="classes_tipo">
-                                    <option value="qq">Guerreiro</option>
-                                    <option value="ww">Ladino</option>
-                                    <option value="eeW">Mago</option>
-                                    <option value="">Paladino</option>
-                                    <option value="">Arqueiro</option>
+                                <select class="form-control" id="classes_tipo">
+                                    <?php foreach ($classes as $classe) : ?>
+                                        <option value="<?php echo $classe->id_classe; ?>"><?php echo $classe->nome; ?></option>
+                                    <?php endforeach ?>
+                                    <!--                                     
+                                    <option id="qq">Guerreiro</option>
+                                    <option id="ww">Ladino</option>
+                                    <option id="eeW">Mago</option>
+                                    <option id="">Paladino</option>
+                                    <option id="">Arqueiro</option> -->
                                 </select>
                             </div>
 
+                            <input type="hidden" name="classe" id="classe"  value="1">
+                            <!-- Script para passar o id da classe -->
+                            <script>
+                                (function() {
+
+                                    // Referencia os itens por id
+                                    var sel = document.getElementById('classes_tipo');
+                                    var el = document.getElementById('classe');
+
+
+                                    function getSelectedOption(sel) {
+                                        var opt;
+                                        for (var i = 0, len = sel.options.length; i < len; i++) {
+                                            opt = sel.options[i];
+                                            if (opt.selected === true) {
+
+                                                break;
+                                            }
+                                        }
+                                        return opt;
+                                    }
+
+                                    sel.onclick = function() {
+                                        el.value = sel.value;
+                                    }
+                                }());
+                            </script>
+
+                            <!-- Script pra passar para as outras tabelas -->
                             <script>
                                 // init
                                 $('.atributos').val($('#classes_tipo option:selected').val());
@@ -82,9 +115,39 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                             <div class="form-group">
                                 <label for="">Arma Inicial</label>
-                                <select class="form-control">
-                                    <option>Puxar do banco</option>
+                                <select class="form-control" id="select_armas">
+                                    <?php foreach ($armas as $arma) : ?>
+                                        <option value="<?php echo $arma->id_arma; ?>"><?php echo $arma->nome; ?></option>
+                                    <?php endforeach ?>
                                 </select>
+                                <input type="hidden" name="arma" id="arma" value="1">
+
+                                <!-- Script para passar o id da arma -->
+                                <script>
+                                    (function() {
+
+                                        // Referencia os itens por id
+                                        var sel = document.getElementById('select_armas');
+                                        var el = document.getElementById('arma');
+
+
+                                        function getSelectedOption(sel) {
+                                            var opt;
+                                            for (var i = 0, len = sel.options.length; i < len; i++) {
+                                                opt = sel.options[i];
+                                                if (opt.selected === true) {
+
+                                                    break;
+                                                }
+                                            }
+                                            return opt;
+                                        }
+
+                                        sel.onclick = function() {
+                                            el.value = sel.value;
+                                        }
+                                    }());
+                                </script>
                             </div>
                             <div class="form-group">
                                 <label>Origem</label>
@@ -95,38 +158,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <label>Imagem</label>
                                 <input type="text" class="form-control" placeholder="URL da Imagem" name="imagem">
                             </div>
+                            <input type="hidden" name="usuario" value="<?php echo $this->session->userdata('id_usuario'); ?>">
+                            <button type="submit" class="btn btn-secondary btn-lg">Salvar Personagem</button>
+                            <br><br>
                         </form>
                     </div>
                     <br>
-                    <div class="col-sm-6">
-                        <label>Atributos</label>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="form-control align" placeholder="Força" readonly>
-                                <br>
-                                <input type="text" class="form-control align" placeholder="Agilidade" readonly>
-                                <br>
-                                <input type="text" class="form-control align" placeholder="Destreza" readonly>
-                                <br>
-                                <input type="text" class="form-control align" placeholder="Vida" readonly>
-                                <br>
-                                <input type="text" class="form-control align" placeholder="Energia" readonly>
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control align atributos" readonly>
-                                <br>
-                                <input type="text" class="form-control align atributos" readonly>
-                                <br>
-                                <input type="text" class="form-control align atributos" readonly>
-                                <br>
-                                <input type="text" class="form-control align atributos" readonly>
-                                <br>
-                                <input type="text" class="form-control align atributos" readonly>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <button type="submit" class="btn btn-secondary btn-lg">Salvar Personagem</button>
+
             </div>
         </div>
 

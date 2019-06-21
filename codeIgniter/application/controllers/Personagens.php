@@ -9,11 +9,13 @@ class Personagens extends CI_Controller
         parent::__construct();
         $this->load->model('Personagens_model');
         $this->load->model('Inimigos_model');
+        $this->load->model('Jogadores_model');
     }
     public function index()
     {
         $data['personagens'] = $this->Personagens_model->selecionar_todos();
         $data['inimigos'] = $this->Inimigos_model->selecionar_todos();
+        $data['jogadores'] = $this->Jogadores_model->selecionar_todos();
         //Chama a view pra carregar html
         $this->load->view('bootstrap');
         $this->load->view('cabecalho/inicio');

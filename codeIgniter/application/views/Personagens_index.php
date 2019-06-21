@@ -119,8 +119,34 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
                 <h1>Jogadores</h1>
+                <ul class="characters">
+                    <?php foreach ($jogadores as $jogador) : ?>
+                        <li>
+                            <div><?php echo $jogador->nome ?></div>
+                            <div class="art">
+                                <img src="<?php echo $jogador->imagem; ?> " class="image">
+                                <div class="overlay enemy">
+                                    <div class="text"><?php echo $jogador->origem ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <?php if ($this->session->userdata('usuario_logado') && ($this->session->userdata('id_usuario') == $jogador->usuario)) : ?>
+                                <a class="edit" href="<?php echo base_url('Jogadores/atualizar/' . $jogador->id_jogador); ?>"><i class="fas fa-edit"></i>Editar</a>
+
+                                <br>
+                                <a class="delete" href="<?php echo base_url('Jogadores/deletar/' . $jogador->id_jogador); ?>"><i class="fas fa-minus-circle"></i>Deletar</a>
+                                <br>
+                            <?php else : ?>
+                                <br>
+                                <br>
+                            <?php endif ?>
+                        </li>
+
+                    <?php endforeach ?>
+                </ul>
                 <?php if ($this->session->userdata('usuario_logado')) : ?>
-                    <a href="Jogadores"><i class="fas fa-plus-circle"></i>Criar Jogador</a>
+                    <a href="<?php echo base_url('Jogadores/cadastrar'); ?>"><i class="fas fa-plus-circle"></i>Criar Jogador</a> <br> <br>
                 <?php endif ?>
             </div>
         </div>

@@ -17,14 +17,14 @@ class Jogadores_model extends CI_Model
         $this->classe           = $cadastro['classe'];
         $this->usuario          = $cadastro['usuario'];
 
-        if (!$this->db->insert('', $this)) {
+        if (!$this->db->insert('jogador', $this)) {
             $this->db->_error_message();
         }
     }
 
     public function remover($id)
     {
-        if (!$this->db->delete('', "id_jogador = $id")) {
+        if (!$this->db->delete('jogador', "id_jogador = $id")) {
             $this->db->_error_message();
         }
     }
@@ -38,20 +38,20 @@ class Jogadores_model extends CI_Model
         $this->classe           = $atualizacao['classe'];
         $this->usuario          = $atualizacao['usuario'];
 
-        if (!$this->db->update('', $this, "id_jogador = $id")) {
+        if (!$this->db->update('jogador', $this, "id_jogador = $id")) {
             $this->db->_error_message();
         }
     }
 
     public function selecionar_todos()
     {
-        $query = $this->db->get('');
+        $query = $this->db->get('jogador');
         return $query->result();
     }
 
     public function selecionar($id)
     {
-        $query = $this->db->get_where('', array('id_jogador' => $id));
+        $query = $this->db->get_where('jogador', array('id_jogador' => $id));
         return $query->row();
     }
 }
