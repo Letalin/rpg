@@ -1,7 +1,7 @@
 # RPG Website
 Site feito para trabalho de Programação Web.
 
-Utilizado para o deenvolvimento:
+Recursos usados no desenvolvimento:
 * HTML
 * CSS
 * PHP
